@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eje 5 · Estructura atómica · Física IV · ISPS 6005</title>
+<meta name="description" content="Átomo de hidrógeno cuántico, separación de variables, números cuánticos, densidad de probabilidad, espín, Stern-Gerlach, efecto Zeeman, Pauli, tabla periódica, rayos X y láser.">
+<meta name="author" content="Lic. Guillermo Aráoz">
+<meta property="og:title" content="Eje 5 · Estructura atómica · Física IV · ISPS 6005">
+<meta property="og:description" content="Átomo de hidrógeno cuántico, separación de variables, números cuánticos, densidad de probabilidad, espín, Stern-Gerlach, efecto Zeeman, Pauli, tabla periódica, rayos X y láser.">
+<meta name="theme-color" content="#b3121f">
+<link rel="icon" href="/assets/img/logo-isps6005.png">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="fila">
+    <a class="escudo" href="/" aria-label="Inicio"><img src="/assets/img/logo-isps6005.png" alt="Escudo del Instituto Superior del Profesorado de Salta N.º 6005"></a>
+    <a class="marca" href="/"><strong>Física IV</strong><span>Profesorado de Educación Secundaria en Física · ISPS N.º 6005 · Docente: Lic. Guillermo Aráoz</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="principal" id="menu" aria-label="Secciones">
+  <ul><li><a href="/">Inicio</a></li><li><a href="/reglamento.html">Reglamento</a></li><li><a href="/programa.html">Programa</a></li><li><a href="/teoria.html" class="activo" aria-current="page">Teoría</a></li><li><a href="/ejercitacion.html">Ejercitación</a></li><li><a href="/resueltos.html">Ejercicios resueltos</a></li><li><a href="/final.html">Preparar el final</a></li><li><a href="/comentarios.html">Banco de comentarios</a></li></ul>
+</nav>
+<main id="contenido">
+<p class="migas"><a href="/">Inicio</a> › <a href="/teoria.html">Teoría</a> › Eje 5</p>
+<h1>Eje 5 · Estructura atómica</h1>
+<div class="lectura"><span>Leer: Giancoli, cap. 39 (Mecánica cuántica de los átomos)</span><span>Complemento: Eisberg (separación de variables, efecto Zeeman) y el apunte del TP de átomos</span></div>
+
+<div class="con-indice">
+<aside class="indice"><strong>En este eje</strong>
+<a href="#bohr-cuantico">1. De Bohr a la cuántica</a><a href="#schrodinger-h">2. Schrödinger para H</a><a href="#numeros">3. Números cuánticos</a><a href="#densidad">4. Funciones de onda</a><a href="#seleccion">5. Reglas de selección</a><a href="#espin">6. Espín y magnetismo</a><a href="#zeeman">7. Efecto Zeeman</a><a href="#pauli">8. Pauli y tabla periódica</a><a href="#rayosx">9. Rayos X y Moseley</a><a href="#laser">10. Fluorescencia y láser</a><a href="#lab">Laboratorio</a><a href="#formulas">Fórmulas</a><a href="#errores">Errores típicos</a><a href="#multimedia">Simulaciones y videos</a>
+</aside>
+<div class="contenido">
+
+<section id="bohr-cuantico">
+<h2>1. De Bohr a la visión cuántica</h2>
+<ul>
+  <li><strong>Se conserva</strong> de Bohr: los niveles de energía son discretos, $E_n=-13{,}6\ \text{eV}/n^2$, y en cada transición se emite o absorbe un fotón.</li>
+  <li><strong>Se abandona:</strong> las órbitas. El electrón no tiene trayectoria; se describe con $\psi$, y $|\psi|^2$ es una “nube” de probabilidad. El átomo no tiene un borde nítido.</li>
+</ul>
+</section>
+
+<section id="schrodinger-h">
+<h2>2. La ecuación de Schrödinger para el hidrógeno</h2>
+<p>El electrón está sometido a la energía potencial de Coulomb, que depende solo de la distancia al núcleo:</p>
+$$U(r)=-\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r}$$
+<p>Como $U$ tiene simetría esférica, conviene usar coordenadas esféricas $(r,\theta,\varphi)$ y buscar soluciones producto (<strong>separación de variables</strong>):</p>
+$$\psi(r,\theta,\varphi)=R(r)\,\Theta(\theta)\,\Phi(\varphi)$$
+<p>La ecuación en derivadas parciales se separa en tres ecuaciones ordinarias. Cada una, con su condición física, da un número cuántico:</p>
+<div class="tabla"><table>
+<thead><tr><th>Ecuación</th><th>Condición física</th><th>Número cuántico</th><th>Qué determina</th></tr></thead>
+<tbody>
+<tr><td>Azimutal ($\varphi$): $\Phi=e^{im_l\varphi}$</td><td>Volver al mismo valor al girar $2\pi$</td><td>$m_l$ entero</td><td>$L_z=m_l\hbar$</td></tr>
+<tr><td>Polar ($\theta$)</td><td>Ser finita en los polos</td><td>$l$ entero, $l\geq|m_l|$</td><td>$L=\sqrt{l(l+1)}\,\hbar$; forma del orbital</td></tr>
+<tr><td>Radial ($r$)</td><td>Tender a cero en el infinito (normalizable)</td><td>$n$ entero, $n\geq l+1$</td><td>Energía $E_n$ y tamaño del orbital</td></tr>
+</tbody></table></div>
+<p>La ecuación radial tiene un potencial efectivo $U_{\text{ef}}=-\dfrac{ke^2}{r}+\dfrac{l(l+1)\hbar^2}{2mr^2}$: el segundo término es una “barrera centrífuga” que aleja del núcleo a los electrones con $l$ grande. Por eso solo los estados $s$ tienen probabilidad no nula en el núcleo. Las energías resultan las mismas que en Bohr. El cuarto número, $m_s$, no sale de Schrödinger: lo explica la ecuación relativista de Dirac.</p>
+</section>
+
+<section id="numeros">
+<h2>3. Los cuatro números cuánticos</h2>
+<div class="tabla"><table>
+<thead><tr><th>Número</th><th>Símbolo</th><th>Valores</th><th>Determina</th></tr></thead>
+<tbody>
+<tr><td>Principal</td><td>$n$</td><td>1, 2, 3, …</td><td>La energía (en H depende solo de $n$)</td></tr>
+<tr><td>Orbital</td><td>$l$</td><td>0, 1, …, $n-1$</td><td>Módulo del momento angular orbital</td></tr>
+<tr><td>Magnético</td><td>$m_l$</td><td>$-l,\dots,0,\dots,+l$</td><td>Componente $z$ del momento angular</td></tr>
+<tr><td>Espín</td><td>$m_s$</td><td>$+\tfrac12,\ -\tfrac12$</td><td>Componente $z$ del espín</td></tr>
+</tbody></table></div>
+$$L=\sqrt{l(l+1)}\,\hbar,\qquad L_z=m_l\hbar,\qquad S=\sqrt{s(s+1)}\,\hbar=\tfrac{\sqrt3}{2}\hbar,\qquad S_z=m_s\hbar$$
+<ul>
+  <li><strong>Notación:</strong> $l=0,1,2,3,4,5$ se escriben s, p, d, f, g, h. El estado 4f es $n=4$, $l=3$.</li>
+  <li><strong>Conteo:</strong> un subnivel $l$ tiene $2(2l+1)$ estados; un nivel $n$ tiene $2n^2$ estados.</li>
+  <li><strong>Cuantización espacial:</strong> $\vec L$ no puede apuntar en cualquier dirección; solo $L_z$ está definida. Como $|L_z|_{\max}=l\hbar&lt;\sqrt{l(l+1)}\hbar$, $\vec L$ nunca apunta exactamente según $z$.</li>
+  <li><strong>Degeneración:</strong> en el hidrógeno, todos los estados con el mismo $n$ tienen la misma energía. Es una propiedad especial del potencial $1/r$; en átomos de varios electrones la energía depende de $n$ y de $l$.</li>
+</ul>
+</section>
+
+<section id="densidad">
+<h2>4. Funciones de onda y densidad de probabilidad</h2>
+<p>Estado fundamental ($n=1$, $l=0$, $m_l=0$), con $r_0=0{,}0529$ nm:</p>
+$$\psi_{100}=\frac{1}{\sqrt{\pi r_0^3}}\,e^{-r/r_0},\qquad P_r=4\pi r^2|\psi|^2=\frac{4r^2}{r_0^3}e^{-2r/r_0}$$
+<ul>
+  <li>$|\psi|^2dV$ es la probabilidad en un volumen $dV$. $P_r\,dr$ es la probabilidad de encontrar el electrón en una cáscara esférica entre $r$ y $r+dr$ (volumen $4\pi r^2dr$): la <strong>distribución radial</strong>.</li>
+  <li>El máximo de $P_r$ para el estado 1s está en $r=r_0$: el radio más probable coincide con el de Bohr.</li>
+  <li>$|\psi|^2$ es máxima en $r=0$, pero $P_r$ es cero ahí porque la cáscara tiene volumen nulo.</li>
+  <li>Los estados s tienen simetría esférica; los de $l&gt;0$ tienen lóbulos o forma de toro. La función radial tiene $n-l-1$ nodos.</li>
+</ul>
+</section>
+
+<section id="seleccion">
+<h2>5. Reglas de selección</h2>
+<p>En la emisión o absorción de un fotón, las transiciones probables cumplen</p>
+$$\Delta l=\pm1\qquad(\Delta m_l=0,\pm1)$$
+<p>El fotón tiene momento angular $\hbar$, que debe conservarse. Las demás transiciones se llaman “prohibidas”: no son imposibles, pero muy poco probables. Ejemplo: un electrón 3d puede bajar a 2p, pero no directamente a 2s ni a 1s.</p>
+</section>
+
+<section id="espin">
+<h2>6. Espín, momento magnético y Stern-Gerlach</h2>
+<p>Un electrón con momento angular orbital se comporta como una pequeña espira: tiene momento magnético $\vec\mu=-\dfrac{e}{2m}\vec L$. La unidad natural es el <strong>magnetón de Bohr</strong>:</p>
+$$\mu_B=\frac{e\hbar}{2m_e}=9{,}27\times10^{-24}\ \text{J/T},\qquad \mu_z=-\mu_Bm_l\ \text{(orbital)},\qquad \mu_z=-g\mu_Bm_s,\ g\approx2{,}0023\ \text{(espín)}$$
+<p>En el <strong>experimento de Stern-Gerlach</strong>, un haz de átomos de plata atraviesa un campo magnético no uniforme, que ejerce una fuerza $F_z=\mu_z\,dB/dz$. Clásicamente se esperaría una mancha continua; se observaron <strong>dos manchas</strong>. Como un momento angular orbital da siempre un número impar de valores ($2l+1$), el resultado mostró que el electrón tiene un momento angular intrínseco, el <strong>espín</strong>, con solo dos orientaciones ($m_s=\pm\tfrac12$).</p>
+<p><strong>Momento angular total</strong> $\vec J=\vec L+\vec S$, con $j=l\pm\tfrac12$. La interacción espín-órbita separa levemente niveles con distinto $j$: es la <strong>estructura fina</strong> (en H, unos $5\times10^{-5}$ eV entre 2P₃/₂ y 2P₁/₂).</p>
+</section>
+
+<section id="zeeman">
+<h2>7. Efecto Zeeman <small>(complemento de Eisberg)</small></h2>
+<p>En un campo magnético externo $B$, la energía de un estado depende de la orientación de su momento magnético: $U=-\vec\mu\cdot\vec B$. Para el momento orbital,</p>
+$$\Delta E=\mu_B\,B\,m_l$$
+<p>Cada nivel de número cuántico $l$ se separa en $2l+1$ subniveles equiespaciados (de ahí el nombre de número cuántico “magnético”). Con la regla $\Delta m_l=0,\pm1$, una línea espectral se divide en <strong>tres</strong> líneas: es el efecto Zeeman normal. Cuando el espín participa, el desdoblamiento es más complejo (Zeeman anómalo). Se usa para medir campos magnéticos en el Sol y las estrellas.</p>
+</section>
+
+<section id="pauli">
+<h2>8. Átomos complejos, principio de exclusión y tabla periódica</h2>
+<p class="idea">Principio de exclusión de Pauli: en un átomo no puede haber dos electrones con los mismos cuatro números cuánticos $(n,l,m_l,m_s)$.</p>
+<ul>
+  <li>Lo cumplen los <strong>fermiones</strong> (espín semientero: electrones, protones, neutrones). Los <strong>bosones</strong> (espín entero: fotones) no lo cumplen.</li>
+  <li><strong>Capas</strong> (mismo $n$): K, L, M, … <strong>Subcapas</strong> (mismo $n$ y $l$). Capacidad: s 2, p 6, d 10, f 14.</li>
+  <li>En átomos de muchos electrones, los internos <strong>apantallan</strong> la carga del núcleo. Un electrón s penetra más cerca del núcleo que uno d y ve más carga efectiva: por eso el <strong>4s se llena antes que el 3d</strong> (K y Ca antes que Sc).</li>
+  <li>Notación: sodio $1s^2\,2s^2\,2p^6\,3s^1$; potasio $\dots3p^6\,4s^1$.</li>
+</ul>
+<div class="tabla"><table>
+<thead><tr><th>Grupo</th><th>Configuración externa</th><th>Comportamiento</th></tr></thead>
+<tbody>
+<tr><td>Gases nobles</td><td>Capas o subcapas p completas</td><td>Distribución esférica, energía de ionización alta: inertes.</td></tr>
+<tr><td>Alcalinos (grupo I)</td><td>Un electrón s fuera de capas completas</td><td>Ve una carga efectiva ≈ +1e, se arranca fácil: valencia +1.</td></tr>
+<tr><td>Halógenos (grupo VII)</td><td>Les falta un electrón para completar la subcapa p</td><td>Atraen un electrón con facilidad: valencia −1.</td></tr>
+<tr><td>Transición, lantánidos, actínidos</td><td>Subcapas internas (d o f) incompletas</td><td>Química parecida, dominada por los electrones s externos.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="rayosx">
+<h2>9. Rayos X y número atómico (ley de Moseley)</h2>
+<p>El espectro de un tubo de rayos X tiene dos partes:</p>
+<ol>
+  <li><strong>Continuo</strong> (bremsstrahlung, “radiación de frenado”): su longitud de onda mínima depende solo del voltaje, $\lambda_0=\dfrac{hc}{eV}=\dfrac{1240}{V}$ nm ($V$ en volts).</li>
+  <li><strong>Líneas características</strong>: un electrón incidente arranca un electrón de la capa K; otro electrón cae a ocupar el hueco y emite un fotón. K$\alpha$: $n=2\to1$; K$\beta$: $n=3\to1$. Dependen del material del blanco, no del voltaje.</li>
+</ol>
+<p>El electrón que cae a la capa K ve una carga nuclear apantallada por el electrón que quedó en ella, aproximadamente $(Z-1)e$:</p>
+$$\frac{1}{\lambda}=R\,(Z-1)^2\left(\frac{1}{n'^2}-\frac{1}{n^2}\right)\qquad\Rightarrow\qquad \sqrt{1/\lambda}\ \text{es lineal con } Z$$
+<p>Moseley (1913) usó esta relación para ordenar los elementos por número atómico (y no por masa), y para predecir elementos que faltaban.</p>
+</section>
+
+<section id="laser">
+<h2>10. Fluorescencia, fosforescencia y láser</h2>
+<ul>
+  <li><strong>Fluorescencia:</strong> el átomo absorbe un fotón (por ejemplo, UV) y vuelve al fundamental en dos o más saltos, emitiendo fotones de menor energía (visibles).</li>
+  <li><strong>Fosforescencia:</strong> el átomo queda en un estado <strong>metaestable</strong> (bajar es una transición “prohibida”) y emite segundos o minutos después, en lugar de $\sim10^{-8}$ s.</li>
+</ul>
+<p><strong>Emisión estimulada:</strong> si un fotón de energía exactamente $E_u-E_l$ pasa junto a un átomo excitado, puede inducirlo a emitir un segundo fotón <strong>idéntico</strong>: misma frecuencia, fase, dirección y polarización. En equilibrio térmico casi todos los átomos están abajo ($N_n/N_{n'}=e^{-(E_n-E_{n'})/kT}$), así que predomina la absorción. Un <strong>láser</strong> necesita:</p>
+<ol>
+  <li><strong>Inversión de población:</strong> más átomos en el nivel superior que en el inferior, lograda por “bombeo” (óptico, eléctrico o por choques).</li>
+  <li>Un <strong>nivel superior metaestable</strong>, para que los átomos se acumulen ahí.</li>
+</ol>
+<p>Una cavidad con dos espejos (uno parcialmente transparente) hace que los fotones pasen muchas veces y la emisión se amplifique en un haz <strong>coherente, monocromático y muy direccional</strong>. Ejemplos: rubí (694,3 nm), He-Ne (632,8 nm; el helio excitado transfiere energía al neón por choques). Un láser <strong>no es una fuente de energía</strong>: convierte parte de la energía del bombeo en un haz estrecho y coherente.</p>
+<p><strong>Holografía</strong> (en una línea): la película registra la interferencia entre el haz de referencia y el reflejado por el objeto, guardando intensidad y fase; iluminada de nuevo con láser, reconstruye una imagen tridimensional.</p>
+</section>
+
+<section id="lab">
+<h2>Laboratorio: configuración electrónica</h2>
+<div class="lab" id="lab-config">
+  <h3>Llenado de subcapas (Z = 1 a 54)</h3>
+  <div class="controles">
+    <label>Número atómico Z<input type="number" name="Z" value="19" min="1" max="54"></label>
+  </div>
+  <div class="salida"></div>
+  <p class="estado">Probá Z = 19 y 20 (el 4s se llena antes que el 3d), Z = 21 (empieza el 3d) y Z = 24 o 29 (excepciones: Cr y Cu).</p>
+</div>
+</section>
+
+<section id="formulas">
+<h2>Fórmulas clave</h2>
+<div class="formulas">
+<div class="formula">$E_n=-13{,}6\ \text{eV}/n^2\qquad l=0..n-1\qquad m_l=-l..+l\qquad m_s=\pm\tfrac12$</div>
+<div class="formula">$L=\sqrt{l(l+1)}\hbar\qquad L_z=m_l\hbar\qquad \text{subnivel: }2(2l+1)\qquad \text{nivel: }2n^2\qquad \Delta l=\pm1$</div>
+<div class="formula">$P_r=4\pi r^2|\psi|^2\qquad \mu_B=e\hbar/2m_e=9{,}27\times10^{-24}\ \text{J/T}\qquad \Delta E=\mu_BBm_l$</div>
+<div class="formula">$\lambda_0=1240/V\ \text{nm}\qquad 1/\lambda=R(Z-1)^2(1/n'^2-1/n^2)\qquad N_n/N_{n'}=e^{-\Delta E/kT}$</div>
+</div>
+</section>
+
+<section id="errores">
+<h2>Errores típicos</h2>
+<ul>
+  <li>Permitir $l=n$ (el máximo es $n-1$) o confundir $L=\sqrt{l(l+1)}\hbar$ con $L=l\hbar$.</li>
+  <li>Contar mal los estados: olvidar el factor 2 del espín.</li>
+  <li>Ignorar la regla de selección en las transiciones (un electrón 3d no puede bajar directamente a 1s).</li>
+  <li>Creer que el voltaje del tubo cambia las líneas K$\alpha$: cambia el corte del continuo.</li>
+  <li>Usar $Z$ en vez de $Z-1$ en la ley de Moseley.</li>
+  <li>Decir que el láser “crea” energía o que funciona sin inversión de población.</li>
+</ul>
+</section>
+
+<section id="multimedia">
+<h2>Simulaciones y videos</h2>
+<div class="medios">
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Modelos del átomo de hidrógeno</strong><p>Compará el modelo de Schrödinger con los anteriores y mirá los estados $(n,l,m)$.</p><div class="acciones"><a class="btn" href="https://phet.colorado.edu/es/simulations/models-of-the-hydrogen-atom" target="_blank" rel="noopener">Abrir en PhET</a></div><p><small>Se abre en el sitio de PhET (Universidad de Colorado) y corre en el navegador.</small></p></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Experimento de Stern-Gerlach</strong><p>Mandá partículas de espín ½ por imanes en distintas orientaciones y mirá en cuántos haces se separan.</p><div class="acciones"><a class="btn" href="https://phet.colorado.edu/es/simulations/stern-gerlach" target="_blank" rel="noopener">Abrir en PhET</a></div><p><small>Se abre en el sitio de PhET (Universidad de Colorado) y corre en el navegador.</small></p></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Láseres</strong><p>Bombeá átomos de dos y tres niveles y conseguí la inversión de población.</p><div class="acciones"><a class="btn" href="https://phet.colorado.edu/es/simulations/lasers" target="_blank" rel="noopener">Abrir en PhET</a></div><p><small>Se abre en el sitio de PhET (Universidad de Colorado) y corre en el navegador.</small></p></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Construir un átomo</strong><p>Armá átomos e iones con protones, neutrones y electrones, y relacioná con la tabla periódica.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta gris">Falstad</span><strong style="display:block">Orbitales del hidrógeno en 3D</strong><p>Visualización de las densidades de probabilidad de los estados (n, l, m) del hidrógeno.</p><div class="acciones"><a class="btn" href="https://www.falstad.com/qmatom/" target="_blank" rel="noopener">Abrir</a></div></div>
+</div>
+<div class="medios">
+<div class="video"><div class="marco" data-yt="AH-xUMq78js" role="button" tabindex="0" aria-label="Reproducir: La física detrás del láser: ¿por qué su luz es perfecta?"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>La física detrás del láser: ¿por qué su luz es perfecta?</strong><small>Video de divulgación · <a href="https://www.youtube.com/watch?v=AH-xUMq78js" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="lVnh1kEb7hI" role="button" tabindex="0" aria-label="Reproducir: Ondas estacionarias: de los armónicos a los orbitales atómicos"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>Ondas estacionarias: de los armónicos a los orbitales atómicos</strong><small>Video de divulgación · <a href="https://www.youtube.com/watch?v=lVnh1kEb7hI" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+</div>
+</section>
+
+<div class="paginacion"><a href="/teoria-4-mecanica-cuantica.html"><span>← Anterior</span>Eje 4 · Mecánica cuántica</a><a class="sig" href="/teoria-6-fisica-nuclear.html"><span>Siguiente →</span>Eje 6 · Física nuclear</a></div>
+</div></div>
+
+</main>
+<footer>
+  <div class="franja"></div>
+  <div class="fila">
+    <div><strong>Física IV · ISPS N.º 6005</strong><br>Instituto Superior del Profesorado de Salta N.º 6005 · Av. Entre Ríos 1851, Salta.<br>Material de estudio elaborado por el Lic. Guillermo Aráoz para el cursado y la preparación del examen final.</div>
+    <div><strong>Contacto</strong><br><a href="mailto:guille.araoz.espoz@gmail.com">guille.araoz.espoz@gmail.com</a><br>Consultas: en clase, por Classroom o a coordinar por mail.</div>
+    <div><strong>Base teórica</strong><br>Giancoli, <em>Física para ciencias e ingeniería</em>, con complementos de Eisberg y apuntes de la cátedra.</div>
+  </div>
+</footer>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/auto-render.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
+<script defer src="/assets/js/laboratorios.js"></script>
+
+</body>
+</html>

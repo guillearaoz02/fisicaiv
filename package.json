@@ -1,0 +1,9 @@
+{
+  "name": "fisica4-isps6005",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio de estudio de Física IV (ISPS N.º 6005) - Lic. Guillermo Aráoz",
+  "type": "module",
+  "scripts": { "build": "python3 build.py" },
+  "dependencies": { "@netlify/blobs": "^8.2.0" }
+}

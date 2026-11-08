@@ -1,0 +1,9 @@
+# Física IV · ISPS 6005 — configuración de Netlify
+# El sitio ya está armado en dist/ (no hace falta comando de build).
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+  command = "echo 'Sitio estático ya generado en dist/'"
+
+[functions]
+  node_bundler = "esbuild"

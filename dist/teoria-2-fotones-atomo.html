@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eje 2 · Propiedades corpusculares de las ondas · Física IV · ISPS 6005</title>
+<meta name="description" content="Cuerpo negro y Planck, fotones, efecto fotoeléctrico, rayos X, efecto Compton, modelos atómicos, modelo de Bohr y espectro del hidrógeno.">
+<meta name="author" content="Lic. Guillermo Aráoz">
+<meta property="og:title" content="Eje 2 · Propiedades corpusculares de las ondas · Física IV · ISPS 6005">
+<meta property="og:description" content="Cuerpo negro y Planck, fotones, efecto fotoeléctrico, rayos X, efecto Compton, modelos atómicos, modelo de Bohr y espectro del hidrógeno.">
+<meta name="theme-color" content="#b3121f">
+<link rel="icon" href="/assets/img/logo-isps6005.png">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="fila">
+    <a class="escudo" href="/" aria-label="Inicio"><img src="/assets/img/logo-isps6005.png" alt="Escudo del Instituto Superior del Profesorado de Salta N.º 6005"></a>
+    <a class="marca" href="/"><strong>Física IV</strong><span>Profesorado de Educación Secundaria en Física · ISPS N.º 6005 · Docente: Lic. Guillermo Aráoz</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="principal" id="menu" aria-label="Secciones">
+  <ul><li><a href="/">Inicio</a></li><li><a href="/reglamento.html">Reglamento</a></li><li><a href="/programa.html">Programa</a></li><li><a href="/teoria.html" class="activo" aria-current="page">Teoría</a></li><li><a href="/ejercitacion.html">Ejercitación</a></li><li><a href="/resueltos.html">Ejercicios resueltos</a></li><li><a href="/final.html">Preparar el final</a></li><li><a href="/comentarios.html">Banco de comentarios</a></li></ul>
+</nav>
+<main id="contenido">
+<p class="migas"><a href="/">Inicio</a> › <a href="/teoria.html">Teoría</a> › Eje 2</p>
+<h1>Eje 2 · Propiedades corpusculares de las ondas</h1>
+<div class="lectura"><span>Leer: Giancoli, cap. 37 (Teoría cuántica temprana y modelos atómicos)</span><span>Complemento: Eisberg, masa reducida y difracción de rayos X</span></div>
+
+<div class="con-indice">
+<aside class="indice"><strong>En este eje</strong>
+<a href="#cuerpo-negro">1. Cuerpo negro y Planck</a><a href="#fotones">2. El fotón</a><a href="#fotoelectrico">3. Efecto fotoeléctrico</a><a href="#rayosx">4. Rayos X y Bragg</a><a href="#compton">5. Efecto Compton</a><a href="#pares">6. Pares y dualidad</a><a href="#modelos">7. Modelos atómicos</a><a href="#espectros">8. Espectros</a><a href="#bohr">9. Modelo de Bohr</a><a href="#masa-reducida">10. Masa reducida</a><a href="#lab-cn">Laboratorios</a><a href="#formulas">Fórmulas</a><a href="#errores">Errores típicos</a><a href="#multimedia">Simulaciones y videos</a>
+</aside>
+<div class="contenido">
+
+<section id="cuerpo-negro">
+<h2>1. Radiación de cuerpo negro y la hipótesis de Planck</h2>
+<p>Todo objeto a temperatura $T$ emite radiación electromagnética con un espectro continuo. Un <strong>cuerpo negro</strong> es un emisor (y absorbente) ideal: absorbe toda la radiación que le llega. Una buena aproximación es un pequeño agujero en una cavidad. Su espectro depende <strong>solo de la temperatura</strong>:</p>
+<ul>
+  <li><strong>Ley de desplazamiento de Wien:</strong> el máximo se corre hacia longitudes de onda menores al aumentar $T$:
+  $$\lambda_{\max}\,T = 2{,}90\times10^{-3}\ \text{m·K}$$
+  Un hierro “al rojo” está más frío que uno “al blanco”; el Sol ($\approx 5800$ K) tiene su pico cerca de 500 nm.</li>
+  <li><strong>Ley de Stefan-Boltzmann:</strong> la potencia total emitida crece con la cuarta potencia de la temperatura:
+  $$P=\varepsilon\,\sigma A T^4,\qquad \sigma=5{,}67\times10^{-8}\ \text{W/(m}^2\text{K}^4)$$
+  ($\varepsilon=1$ para el cuerpo negro). Si $T$ se duplica, la potencia se multiplica por 16.</li>
+</ul>
+<p><strong>La catástrofe ultravioleta.</strong> La teoría clásica (Rayleigh-Jeans) predecía una intensidad que crece sin límite a longitudes de onda cortas: energía total infinita. Funcionaba bien solo para $\lambda$ grandes.</p>
+<p><strong>La solución de Planck (1900).</strong> Supuso que los osciladores de las paredes solo pueden tener energías que son múltiplos enteros de un “cuanto”:</p>
+$$E=n\,hf,\qquad n=1,2,3,\dots,\qquad h=6{,}626\times10^{-34}\ \text{J·s}$$
+<p>A frecuencias altas el cuanto $hf$ es tan grande comparado con la energía térmica $kT$ que esos modos casi no se excitan, y la curva cae. La fórmula de Planck</p>
+$$I(\lambda,T)=\frac{2\pi hc^2\lambda^{-5}}{e^{hc/\lambda kT}-1}$$
+<p>ajusta perfectamente los datos y contiene las leyes de Wien y de Stefan-Boltzmann. Fue el nacimiento de la física cuántica, aunque Planck lo vio al principio como un artificio matemático.</p>
+</section>
+
+<section id="fotones">
+<h2>2. La teoría cuántica de la luz: el fotón</h2>
+<p>Einstein (1905) fue más lejos: la luz misma está formada por cuantos, los <strong>fotones</strong>. Cada fotón de frecuencia $f$ tiene</p>
+$$E=hf=\frac{hc}{\lambda},\qquad p=\frac{E}{c}=\frac{h}{\lambda},\qquad hc=1240\ \text{eV·nm}$$
+<p>El fotón no tiene masa y siempre viaja a $c$. Un haz más intenso tiene <strong>más fotones</strong>, no fotones más energéticos.</p>
+</section>
+
+<section id="fotoelectrico">
+<h2>3. El efecto fotoeléctrico</h2>
+<p>Al iluminar un metal limpio se pueden arrancar electrones. En un fototubo se mide la corriente y el <strong>potencial de frenado</strong> $V_0$ necesario para detener a los electrones más rápidos: $K_{\max}=eV_0$.</p>
+<div class="tabla"><table>
+<thead><tr><th>Observación experimental</th><th>Predicción clásica (onda)</th><th>Explicación con fotones</th></tr></thead>
+<tbody>
+<tr><td>Hay una <strong>frecuencia umbral</strong> $f_0$: por debajo no se emite ningún electrón, por intensa que sea la luz.</td><td>Con suficiente intensidad, siempre debería haber emisión.</td><td>Un fotón con $hf&lt;\phi$ no alcanza para arrancar el electrón.</td></tr>
+<tr><td>$K_{\max}$ depende de la <strong>frecuencia</strong>, no de la intensidad.</td><td>Más intensidad → electrones más rápidos.</td><td>$K_{\max}=hf-\phi$: cada electrón recibe la energía de un solo fotón.</td></tr>
+<tr><td>Más intensidad → <strong>más electrones</strong> (más corriente).</td><td>—</td><td>Más fotones por segundo.</td></tr>
+<tr><td>La emisión es <strong>instantánea</strong>.</td><td>Con luz débil debería haber una demora para “acumular” energía.</td><td>La interacción es un choque fotón–electrón.</td></tr>
+</tbody></table></div>
+$$K_{\max}=hf-\phi=eV_0,\qquad f_0=\frac{\phi}{h},\qquad \lambda_0=\frac{hc}{\phi}$$
+<p>$\phi$ es la <strong>función trabajo</strong> del metal (de 2 a 6 eV). La gráfica de $V_0$ en función de $f$ es una recta de pendiente $h/e$, la misma para todos los metales: así midió Millikan la constante de Planck. Aplicaciones: fotoceldas, sensores de cámaras, fotomultiplicadores.</p>
+</section>
+
+<section id="rayosx">
+<h2>4. Rayos X y su difracción</h2>
+<p>Los rayos X (Röntgen, 1895) se producen al frenar electrones rápidos contra un blanco metálico. Son radiación electromagnética de longitud de onda muy corta ($\sim 0{,}01$–$10$ nm). El espectro tiene una parte continua, con una <strong>longitud de onda mínima</strong> $\lambda_0 = hc/eV$ que depende solo del voltaje, y líneas características del material del blanco (se explican en el eje 5).</p>
+<p>Como su longitud de onda es comparable con la distancia entre átomos, un cristal funciona como red de difracción. Hay interferencia constructiva cuando se cumple la <strong>condición de Bragg</strong>:</p>
+$$m\lambda=2d\operatorname{sen}\theta,\qquad m=1,2,3,\dots$$
+<p>($\theta$ medido desde los planos del cristal, no desde la normal). Así se determinan estructuras cristalinas y, con la difracción de rayos X, se descubrió la doble hélice del ADN.</p>
+</section>
+
+<section id="compton">
+<h2>5. El efecto Compton</h2>
+<p>Compton hizo incidir rayos X sobre grafito y encontró que la radiación dispersada tiene una longitud de onda <strong>mayor</strong> que la incidente, y que el corrimiento depende del ángulo de dispersión. Clásicamente la onda dispersada debería tener la misma frecuencia. Tratando la interacción como un <strong>choque elástico entre un fotón y un electrón</strong> (con energía y momento relativistas conservados):</p>
+$$\Delta\lambda=\lambda'-\lambda=\frac{h}{m_ec}\,(1-\cos\theta),\qquad \frac{h}{m_ec}=2{,}43\times10^{-12}\ \text{m}\ \text{(longitud de onda Compton)}$$
+<p>El corrimiento va de 0 ($\theta=0$) a $2h/m_ec\approx4{,}86$ pm ($\theta=180°$). Solo se nota con rayos X o gamma: para luz visible ($\lambda\sim500$ nm) es despreciable. La energía que pierde el fotón la gana el electrón como energía cinética.</p>
+</section>
+
+<section id="pares">
+<h2>6. Producción de pares y dualidad onda-partícula</h2>
+<p>Un fotón de energía suficiente que pasa cerca de un núcleo puede convertirse en un electrón y un positrón: <strong>producción de pares</strong>. La energía mínima es $2m_ec^2=1{,}022$ MeV (rayos gamma). El proceso inverso es la <strong>aniquilación</strong>, que produce dos fotones de 0,511 MeV (base de la tomografía PET). Es materialización de energía, según $E=mc^2$.</p>
+<p class="idea">La luz se comporta como onda en la interferencia y la difracción, y como partícula en el fotoeléctrico y en Compton. No muestra los dos aspectos en el mismo experimento.</p>
+<p>Este es el <strong>principio de complementariedad</strong> de Bohr: para entender la luz necesitamos los dos modelos, que se complementan. La conexión es probabilística: la intensidad de la onda en un punto indica la probabilidad de encontrar ahí un fotón (eje 3).</p>
+</section>
+
+<section id="modelos">
+<h2>7. Modelos atómicos</h2>
+<div class="tabla"><table>
+<thead><tr><th>Modelo</th><th>Idea central</th><th>Limitación</th></tr></thead>
+<tbody>
+<tr><td><strong>Thomson</strong> (1897–1904)</td><td>Esfera de carga positiva uniforme con los electrones incrustados (“budín de pasas”).</td><td>No explica la dispersión a grandes ángulos de Rutherford ni los espectros de líneas.</td></tr>
+<tr><td><strong>Rutherford</strong> (1911)</td><td>Núcleo diminuto, positivo y masivo; electrones girando alrededor; el átomo es casi vacío.</td><td>Un electrón acelerado debería radiar, perder energía y caer en espiral al núcleo; predice un espectro continuo.</td></tr>
+<tr><td><strong>Bohr</strong> (1913)</td><td>Órbitas estacionarias con momento angular cuantizado; se emite un fotón solo al saltar entre niveles.</td><td>Mezcla ideas clásicas y cuánticas; solo funciona bien para átomos de un electrón; no explica intensidades, estructura fina ni enlaces.</td></tr>
+</tbody></table></div>
+<p><strong>Experimento de Rutherford</strong> (Geiger y Marsden): partículas alfa contra una lámina de oro delgada. Casi todas pasan sin desviarse, pero unas pocas rebotan hacia atrás. Con el modelo de Thomson eso era imposible; Rutherford concluyó que la carga positiva y casi toda la masa están concentradas en un núcleo de tamaño $\sim10^{-15}$–$10^{-14}$ m, unas 10 000 veces más chico que el átomo.</p>
+</section>
+
+<section id="espectros">
+<h2>8. Espectros continuos y de líneas</h2>
+<p>Un sólido o un gas denso caliente emiten un espectro <strong>continuo</strong> (cuerpo negro). Un gas enrarecido excitado (por una descarga eléctrica) emite un espectro de <strong>líneas</strong>, característico de cada elemento, como una huella digital. Si luz blanca atraviesa ese gas frío, aparecen líneas oscuras de <strong>absorción</strong> en las mismas longitudes de onda.</p>
+<p>Para el hidrógeno, Balmer (1885) encontró empíricamente las líneas visibles y Rydberg generalizó:</p>
+$$\frac{1}{\lambda}=R\left(\frac{1}{n'^2}-\frac{1}{n^2}\right),\qquad R=1{,}097\times10^{7}\ \text{m}^{-1},\qquad n>n'$$
+<div class="tabla"><table>
+<thead><tr><th>Serie</th><th>Nivel final $n'$</th><th>Región</th></tr></thead>
+<tbody><tr><td>Lyman</td><td>1</td><td>ultravioleta</td></tr><tr><td>Balmer</td><td>2</td><td>visible (y UV cercano)</td></tr><tr><td>Paschen</td><td>3</td><td>infrarrojo</td></tr><tr><td>Brackett</td><td>4</td><td>infrarrojo</td></tr><tr><td>Pfund</td><td>5</td><td>infrarrojo</td></tr></tbody></table></div>
+</section>
+
+<section id="bohr">
+<h2>9. El modelo de Bohr</h2>
+<p><strong>Postulados:</strong></p>
+<ol>
+  <li>El electrón gira en órbitas circulares por la atracción de Coulomb, pero solo en ciertas <strong>órbitas estacionarias</strong> en las que <strong>no radia</strong>.</li>
+  <li>En esas órbitas el momento angular está cuantizado: $L=m_evr_n=n\hbar=n\dfrac{h}{2\pi}$.</li>
+  <li>El átomo emite (o absorbe) un fotón solo cuando el electrón salta de un nivel a otro: $hf=E_u-E_l$.</li>
+</ol>
+<p>Combinando $L=n\hbar$ con la fuerza de Coulomb como fuerza centrípeta se obtiene, para un átomo de un electrón con número atómico $Z$:</p>
+$$r_n=\frac{n^2}{Z}\,r_1,\quad r_1=0{,}0529\ \text{nm (radio de Bohr)};\qquad E_n=-\frac{13{,}6\ \text{eV}\cdot Z^2}{n^2}$$
+<ul>
+  <li>La energía es <strong>negativa</strong>: el electrón está ligado. $E_1=-13{,}6$ eV es el estado fundamental; la <strong>energía de ionización</strong> del hidrógeno es 13,6 eV.</li>
+  <li>Los niveles se apiñan hacia $E=0$ al crecer $n$.</li>
+  <li>Al reemplazar en $hf=E_n-E_{n'}$ se recupera la fórmula de Rydberg y el valor de $R$ a partir de constantes fundamentales: el gran éxito del modelo.</li>
+  <li>Funciona para iones con un solo electrón (He⁺, Li²⁺) usando $Z$.</li>
+  <li><strong>Principio de correspondencia:</strong> para $n$ muy grande, los resultados cuánticos se acercan a los clásicos.</li>
+</ul>
+<p><strong>Interpretación de De Broglie</strong> (anticipo del eje 3): las órbitas permitidas son aquellas en las que cabe un número entero de longitudes de onda del electrón, $2\pi r_n=n\lambda$, como una onda estacionaria en un anillo. Con $\lambda=h/mv$ esto da exactamente $L=n\hbar$.</p>
+</section>
+
+<section id="masa-reducida">
+<h2>10. Masa reducida <small>(complemento de Eisberg)</small></h2>
+<p>Bohr supuso un núcleo infinitamente pesado y quieto. En realidad, electrón y núcleo giran alrededor de su centro de masa. El problema de dos cuerpos se reduce a uno reemplazando $m_e$ por la <strong>masa reducida</strong>:</p>
+$$\mu=\frac{m_e M}{m_e+M}=\frac{m_e}{1+m_e/M}$$
+<p>Todas las energías se multiplican por $\mu/m_e$ (para el hidrógeno, 0,99946) y la constante de Rydberg pasa a ser $R_M=R_\infty\,\mu/m_e$. El efecto es pequeño pero medible: las líneas del <strong>deuterio</strong> (núcleo dos veces más pesado) aparecen corridas unas 0,18 nm respecto de las del hidrógeno en la línea H$\alpha$. Así se descubrió el deuterio (Urey, 1932).</p>
+</section>
+
+<section id="lab-cn">
+<h2>Laboratorio: espectro de cuerpo negro</h2>
+<div class="lab" id="lab-cuerponegro">
+  <h3>Ley de Planck, Wien y Stefan-Boltzmann</h3>
+  <div class="controles">
+    <label><span>Temperatura T = <b class="T-val"></b> K</span><input type="range" name="T" min="1000" max="12000" step="100" value="5800"></label>
+    <label style="flex-direction:row;align-items:center;gap:6px"><input type="checkbox" name="sol" checked> Comparar con el Sol (5800 K)</label>
+  </div>
+  <canvas style="height:230px"></canvas>
+  <div class="salida"></div>
+  <p class="estado">Bajá la temperatura a 3000 K (filamento de lámpara): ¿dónde queda el pico? ¿Por qué esas lámparas eran tan ineficientes?</p>
+</div>
+</section>
+
+<section id="lab-h">
+<h2>Laboratorio: transiciones en el átomo de Bohr</h2>
+<div class="lab" id="lab-hidrogeno">
+  <h3>Niveles de energía y líneas espectrales</h3>
+  <div class="controles">
+    <label>Nivel inicial nᵢ<select name="ni"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+    <label>Nivel final n_f<select name="nf"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+    <label>Átomo<select name="Z"><option value="1">H (Z = 1)</option><option value="2">He⁺ (Z = 2)</option><option value="3">Li²⁺ (Z = 3)</option></select></label>
+  </div>
+  <p class="aviso-lab" style="color:var(--rojo)"></p>
+  <canvas style="height:240px"></canvas>
+  <div class="salida"></div>
+</div>
+</section>
+
+<section id="formulas">
+<h2>Fórmulas clave</h2>
+<div class="formulas">
+<div class="formula">$\lambda_{\max}T=2{,}90\times10^{-3}\ \text{m·K}\qquad P=\varepsilon\sigma AT^4\qquad E=nhf$</div>
+<div class="formula">$E=hf=hc/\lambda\qquad p=h/\lambda\qquad hc=1240\ \text{eV·nm}\qquad 1\ \text{eV}=1{,}60\times10^{-19}\ \text{J}$</div>
+<div class="formula">$K_{\max}=hf-\phi=eV_0\qquad \lambda_0=hc/\phi\qquad m\lambda=2d\operatorname{sen}\theta\qquad \Delta\lambda=\dfrac{h}{m_ec}(1-\cos\theta)$</div>
+<div class="formula">$E_n=-13{,}6\,Z^2/n^2\ \text{eV}\qquad r_n=n^2r_1/Z\qquad hf=E_u-E_l\qquad 1/\lambda=R(1/n'^2-1/n^2)$</div>
+</div>
+</section>
+
+<section id="errores">
+<h2>Errores típicos</h2>
+<ul>
+  <li>Pensar que más intensidad da electrones más rápidos en el fotoeléctrico.</li>
+  <li>Mezclar eV y J. Truco: trabajá todo en eV y nm con $hc=1240$ eV·nm.</li>
+  <li>En Bohr, olvidar el signo negativo de $E_n$ o restar al revés: la energía del fotón es siempre positiva, $E_\gamma=|E_i-E_f|$.</li>
+  <li>Decir que en el modelo de Bohr el electrón “radia mientras gira”: en las órbitas estacionarias no radia.</li>
+  <li>En Bragg, medir el ángulo desde la normal en lugar de desde los planos.</li>
+  <li>Aplicar $E_n=-13{,}6/n^2$ a átomos de varios electrones (solo vale para un electrón).</li>
+</ul>
+</section>
+
+<section id="multimedia">
+<h2>Simulaciones y videos</h2>
+<div class="medios">
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Espectro de cuerpo negro</strong><p>Cambiá la temperatura de una estrella, una lámpara o la Tierra y compará curvas y el pico de Wien.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Dispersión de Rutherford</strong><p>Disparale partículas alfa al átomo de Thomson y al de Rutherford y compará las trayectorias.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/rutherford-scattering/latest/rutherford-scattering_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/rutherford-scattering/latest/rutherford-scattering_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Efecto fotoeléctrico</strong><p>Variá longitud de onda, intensidad, metal y voltaje. Encontrá el umbral y el potencial de frenado.</p><div class="acciones"><a class="btn" href="https://phet.colorado.edu/es/simulations/photoelectric" target="_blank" rel="noopener">Abrir en PhET</a></div><p><small>Se abre en el sitio de PhET (Universidad de Colorado) y corre en el navegador.</small></p></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Modelos del átomo de hidrógeno</strong><p>Iluminá el átomo con distintos modelos (bola de billar, budín, Bohr, De Broglie, Schrödinger) y compará con el experimento.</p><div class="acciones"><a class="btn" href="https://phet.colorado.edu/es/simulations/models-of-the-hydrogen-atom" target="_blank" rel="noopener">Abrir en PhET</a></div><p><small>Se abre en el sitio de PhET (Universidad de Colorado) y corre en el navegador.</small></p></div>
+</div>
+<div class="medios">
+<div class="video"><div class="marco" data-yt="myAUEYtOkmA" role="button" tabindex="0" aria-label="Reproducir: La catástrofe ultravioleta"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>La catástrofe ultravioleta</strong><small>Relatos Cuánticos #2 · <a href="https://www.youtube.com/watch?v=myAUEYtOkmA" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="5CLj9uJPQKg" role="button" tabindex="0" aria-label="Reproducir: ¿Sabés qué es el efecto fotoeléctrico?"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>¿Sabés qué es el efecto fotoeléctrico?</strong><small>Date un Voltio · Javier Santaolalla · <a href="https://www.youtube.com/watch?v=5CLj9uJPQKg" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="uJqKDNYi6-I" role="button" tabindex="0" aria-label="Reproducir: El modelo atómico de Bohr y su historia"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>El modelo atómico de Bohr y su historia</strong><small>Historia de la física cuántica, episodio 5 · <a href="https://www.youtube.com/watch?v=uJqKDNYi6-I" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+</div>
+</section>
+
+<div class="paginacion"><a href="/teoria-1-relatividad.html"><span>← Anterior</span>Eje 1 · Relatividad</a><a class="sig" href="/teoria-3-ondas-materia.html"><span>Siguiente →</span>Eje 3 · Propiedades ondulatorias de las partículas</a></div>
+</div></div>
+
+</main>
+<footer>
+  <div class="franja"></div>
+  <div class="fila">
+    <div><strong>Física IV · ISPS N.º 6005</strong><br>Instituto Superior del Profesorado de Salta N.º 6005 · Av. Entre Ríos 1851, Salta.<br>Material de estudio elaborado por el Lic. Guillermo Aráoz para el cursado y la preparación del examen final.</div>
+    <div><strong>Contacto</strong><br><a href="mailto:guille.araoz.espoz@gmail.com">guille.araoz.espoz@gmail.com</a><br>Consultas: en clase, por Classroom o a coordinar por mail.</div>
+    <div><strong>Base teórica</strong><br>Giancoli, <em>Física para ciencias e ingeniería</em>, con complementos de Eisberg y apuntes de la cátedra.</div>
+  </div>
+</footer>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/auto-render.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
+<script defer src="/assets/js/laboratorios.js"></script>
+
+</body>
+</html>

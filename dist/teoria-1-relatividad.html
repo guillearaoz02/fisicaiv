@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eje 1 · Relatividad especial · Física IV · ISPS 6005</title>
+<meta name="description" content="Resumen de relatividad especial: Michelson-Morley, postulados de Einstein, dilatación del tiempo, contracción de longitudes, transformación de Lorentz, momento y energía relativistas.">
+<meta name="author" content="Lic. Guillermo Aráoz">
+<meta property="og:title" content="Eje 1 · Relatividad especial · Física IV · ISPS 6005">
+<meta property="og:description" content="Resumen de relatividad especial: Michelson-Morley, postulados de Einstein, dilatación del tiempo, contracción de longitudes, transformación de Lorentz, momento y energía relativistas.">
+<meta name="theme-color" content="#b3121f">
+<link rel="icon" href="/assets/img/logo-isps6005.png">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="fila">
+    <a class="escudo" href="/" aria-label="Inicio"><img src="/assets/img/logo-isps6005.png" alt="Escudo del Instituto Superior del Profesorado de Salta N.º 6005"></a>
+    <a class="marca" href="/"><strong>Física IV</strong><span>Profesorado de Educación Secundaria en Física · ISPS N.º 6005 · Docente: Lic. Guillermo Aráoz</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="principal" id="menu" aria-label="Secciones">
+  <ul><li><a href="/">Inicio</a></li><li><a href="/reglamento.html">Reglamento</a></li><li><a href="/programa.html">Programa</a></li><li><a href="/teoria.html" class="activo" aria-current="page">Teoría</a></li><li><a href="/ejercitacion.html">Ejercitación</a></li><li><a href="/resueltos.html">Ejercicios resueltos</a></li><li><a href="/final.html">Preparar el final</a></li><li><a href="/comentarios.html">Banco de comentarios</a></li></ul>
+</nav>
+<main id="contenido">
+<p class="migas"><a href="/">Inicio</a> › <a href="/teoria.html">Teoría</a> › Eje 1</p>
+<h1>Eje 1 · Teoría especial de la relatividad</h1>
+<div class="lectura"><span>Leer: Giancoli, cap. 36 (Relatividad especial)</span><span>Complemento: Eisberg, diagramas de Minkowski e intervalo invariante</span></div>
+
+<div class="con-indice">
+<aside class="indice"><strong>En este eje</strong>
+<a href="#galileo">1. Galileo y el éter</a><a href="#mm">2. Michelson-Morley</a><a href="#postulados">3. Postulados</a><a href="#simultaneidad">4. Simultaneidad</a><a href="#dilatacion">5. Dilatación del tiempo</a><a href="#contraccion">6. Contracción</a><a href="#lorentz">7. Lorentz</a><a href="#minkowski">8. Espacio-tiempo</a><a href="#dinamica">9. Momento y energía</a><a href="#lab">Laboratorio</a><a href="#formulas">Fórmulas</a><a href="#errores">Errores típicos</a><a href="#multimedia">Videos</a>
+</aside>
+<div class="contenido">
+
+<section id="galileo">
+<h2>1. Relatividad de Galileo y el problema del éter</h2>
+<p>Un <strong>sistema de referencia inercial</strong> es aquel donde vale la primera ley de Newton. Galileo y Newton afirmaban que las leyes de la mecánica son las mismas en todos los sistemas inerciales y que tiempo y espacio son absolutos. Entre dos sistemas $S$ y $S'$ que se mueven con velocidad relativa $v$ según $x$, la <strong>transformación de Galileo</strong> es:</p>
+$$x'=x-vt,\qquad y'=y,\qquad z'=z,\qquad t'=t,\qquad u'=u-v$$
+<p>El problema apareció con el electromagnetismo: las ecuaciones de Maxwell predicen que la luz viaja a $c = 1/\sqrt{\varepsilon_0\mu_0}\approx 3{,}00\times10^8$ m/s, sin decir “respecto de qué”. Se supuso que había un medio, el <strong>éter</strong>, y que la Tierra se movía a través de él.</p>
+</section>
+
+<section id="mm">
+<h2>2. El experimento de Michelson-Morley</h2>
+<p>Con un interferómetro, Michelson y Morley compararon el tiempo que tarda la luz en recorrer dos brazos perpendiculares. Si la Tierra se moviera respecto del éter, al girar el aparato 90° debería correrse el patrón de franjas. <strong>No se observó ningún corrimiento</strong>, ni en distintas épocas del año. El resultado nulo indica que no hay un “viento de éter”: la rapidez de la luz es la misma en todas las direcciones para un observador en la Tierra.</p>
+</section>
+
+<section id="postulados">
+<h2>3. Los postulados de Einstein (1905)</h2>
+<ol>
+  <li><strong>Principio de relatividad:</strong> las leyes de la física tienen la misma forma en todos los sistemas de referencia inerciales.</li>
+  <li><strong>Constancia de la rapidez de la luz:</strong> la luz se propaga en el vacío con rapidez $c$, independiente del movimiento de la fuente o del observador.</li>
+</ol>
+<p>El segundo postulado explica de manera directa el resultado de Michelson-Morley y vuelve innecesario el éter. Pero tiene un precio: tiempo y espacio dejan de ser absolutos.</p>
+</section>
+
+<section id="simultaneidad">
+<h2>4. Relatividad de la simultaneidad</h2>
+<p class="idea">Dos sucesos simultáneos para un observador, si ocurren en lugares distintos, no son simultáneos para otro observador en movimiento relativo.</p>
+<p>Ejemplo clásico: caen dos rayos en los extremos de un vagón. Para el observador del andén, ubicado en el punto medio, la luz de ambos llega a la vez: fueron simultáneos. Para la pasajera del punto medio del vagón, que se mueve hacia uno de los rayos, la luz de ese rayo llega antes; como para ella la luz también viaja a $c$ en ambos sentidos, concluye que ese rayo cayó primero. <strong>Ninguno de los dos está equivocado.</strong></p>
+</section>
+
+<section id="dilatacion">
+<h2>5. Dilatación del tiempo</h2>
+<p>Pensemos en un “reloj de luz”: un pulso que rebota entre dos espejos separados $D$, dentro de una nave. En la nave, cada tic dura $\Delta t_0 = 2D/c$. Desde la Tierra, la nave se mueve con rapidez $v$ y la luz recorre una diagonal más larga; como la rapidez de la luz es la misma, el tic dura más:</p>
+$$\Delta t=\frac{\Delta t_0}{\sqrt{1-v^2/c^2}}=\gamma\,\Delta t_0,\qquad \gamma=\frac{1}{\sqrt{1-v^2/c^2}}\geq 1$$
+<p><strong>$\Delta t_0$ es el tiempo propio</strong>: el intervalo medido por un reloj que está en reposo respecto de los dos sucesos (que ocurren en el mismo lugar para ese reloj). Cualquier otro observador mide un intervalo mayor.</p>
+<p><strong>Evidencia:</strong> los muones creados en la alta atmósfera viven en promedio 2,2 μs en su propio sistema; sin dilatación recorrerían unos 650 m, pero llegan en grandes cantidades al suelo, a decenas de kilómetros. También se midió con relojes atómicos en aviones y es imprescindible para el GPS.</p>
+<p><strong>Paradoja de los gemelos:</strong> el gemelo que viaja vuelve más joven. No es simétrico porque el viajero cambia de sistema inercial al dar la vuelta.</p>
+</section>
+
+<section id="contraccion">
+<h2>6. Contracción de longitudes</h2>
+$$L=L_0\sqrt{1-v^2/c^2}=\frac{L_0}{\gamma}$$
+<p><strong>$L_0$ es la longitud propia</strong>, medida en reposo respecto del objeto. Solo se contrae la dimensión paralela al movimiento. Para el muón, la atmósfera está contraída: desde su punto de vista, la distancia que debe recorrer es mucho menor, y llega igual. Dilatación y contracción son dos caras de la misma descripción.</p>
+</section>
+
+<section id="lorentz">
+<h2>7. Transformación de Lorentz y suma de velocidades</h2>
+<p>Reemplaza a la de Galileo y es compatible con los dos postulados ($S'$ se mueve con velocidad $v$ en $+x$ respecto de $S$):</p>
+$$x'=\gamma\,(x-vt),\qquad t'=\gamma\left(t-\frac{v\,x}{c^2}\right),\qquad y'=y,\qquad z'=z$$
+$$x=\gamma\,(x'+vt'),\qquad t=\gamma\left(t'+\frac{v\,x'}{c^2}\right)$$
+<p>De ella salen la dilatación, la contracción y la relatividad de la simultaneidad (el término $vx/c^2$). Para $v\ll c$, $\gamma\to1$ y se recupera Galileo.</p>
+<p><strong>Suma relativista de velocidades.</strong> Si un objeto se mueve con velocidad $u'$ respecto de $S'$ (en la dirección $x$):</p>
+$$u=\frac{u'+v}{1+\dfrac{v\,u'}{c^2}}\qquad\qquad u'=\frac{u-v}{1-\dfrac{v\,u}{c^2}}$$
+<p>Nunca da un resultado mayor que $c$: si $u'=c$, entonces $u=c$.</p>
+</section>
+
+<section id="minkowski">
+<h2>8. Espacio-tiempo y diagramas de Minkowski</h2>
+<p>Un <strong>suceso</strong> queda determinado por cuatro coordenadas $(x,y,z,t)$. En un diagrama de Minkowski se grafica $ct$ en el eje vertical y $x$ en el horizontal, para que la luz quede a 45°. La trayectoria de un objeto es su <strong>línea de universo</strong>; un objeto con masa siempre tiene una línea más empinada que la de la luz.</p>
+<ul>
+  <li>Los ejes de un sistema $S'$ en movimiento aparecen “cerrados” hacia la diagonal de la luz. Las rectas paralelas al eje $x'$ son sucesos simultáneos para $S'$: por eso la simultaneidad es relativa.</li>
+  <li>El <strong>intervalo</strong> $(\Delta s)^2=(c\Delta t)^2-(\Delta x)^2$ es el mismo para todos los observadores inerciales: es el “largo” invariante en el espacio-tiempo. Si es positivo (tipo tiempo), los sucesos pueden estar causalmente conectados.</li>
+</ul>
+</section>
+
+<section id="dinamica">
+<h2>9. Cantidad de movimiento y energía relativistas</h2>
+<p>Para que la cantidad de movimiento se conserve en todos los sistemas inerciales hay que redefinirla:</p>
+$$\vec p=\gamma m\vec v=\frac{m\vec v}{\sqrt{1-v^2/c^2}}$$
+<p>Aquí $m$ es <strong>la masa (en reposo)</strong>, que es una propiedad invariante. Algunos textos hablan de “masa relativista” $\gamma m$; Giancoli (y la física actual) prefiere no usarla: lo que crece con la velocidad es $\gamma$, no la masa. A medida que $v\to c$, $\gamma\to\infty$ y hace falta un trabajo infinito: <strong>ningún objeto con masa alcanza la rapidez de la luz</strong>.</p>
+<p>Del teorema trabajo-energía se obtiene:</p>
+$$K=(\gamma-1)\,mc^2,\qquad E=\gamma mc^2=K+mc^2,\qquad E_0=mc^2,\qquad E^2=(pc)^2+(mc^2)^2$$
+<ul>
+  <li>$mc^2$ es la <strong>energía en reposo</strong>: la masa es una forma de energía. En las reacciones nucleares, la disminución de masa aparece como energía cinética (eje 6).</li>
+  <li>Para $v\ll c$, $K\approx\tfrac12mv^2$. La fórmula clásica deja de servir cuando $K$ es comparable con $mc^2$ (para el electrón, 0,511 MeV).</li>
+  <li>Unidades prácticas: energías en eV o MeV, masas en MeV/$c^2$ y momentos en MeV/$c$. Para partículas sin masa (fotón), $E=pc$.</li>
+</ul>
+</section>
+
+<section id="lab">
+<h2>Laboratorio: calculadora relativista</h2>
+<div class="lab" id="lab-relatividad">
+  <h3>¿Cuándo importa la relatividad?</h3>
+  <div class="controles">
+    <label><span>Rapidez v/c = <b class="b-val"></b></span><input type="range" name="beta" min="0" max="999" value="800"></label>
+    <label>Tiempo propio Δt₀ (μs)<input type="number" name="t0" value="2.2" step="0.1"></label>
+    <label>Longitud propia L₀ (m)<input type="number" name="L0" value="100" step="1"></label>
+  </div>
+  <canvas style="height:200px"></canvas>
+  <div class="salida"></div>
+  <p class="estado">Mirá la última casilla: a v = 0,1c la energía cinética clásica difiere menos de 1 % de la relativista; a 0,8c, la clásica da menos de la mitad.</p>
+</div>
+</section>
+
+<section id="formulas">
+<h2>Fórmulas clave</h2>
+<div class="formulas">
+<div class="formula">$\gamma=1/\sqrt{1-v^2/c^2}\qquad \Delta t=\gamma\Delta t_0\qquad L=L_0/\gamma$</div>
+<div class="formula">$x'=\gamma(x-vt)\qquad t'=\gamma(t-vx/c^2)\qquad u=\dfrac{u'+v}{1+vu'/c^2}$</div>
+<div class="formula">$p=\gamma mv\qquad E=\gamma mc^2\qquad K=(\gamma-1)mc^2\qquad E^2=p^2c^2+m^2c^4$</div>
+<div class="formula">$m_ec^2=0{,}511\ \text{MeV}\qquad m_pc^2=938{,}3\ \text{MeV}\qquad 1\ \text{u}\,c^2=931{,}5\ \text{MeV}$</div>
+</div>
+</section>
+
+<section id="errores">
+<h2>Errores típicos</h2>
+<ul>
+  <li>No identificar cuál es el <strong>tiempo propio</strong> o la <strong>longitud propia</strong>. Preguntate: ¿quién ve los dos sucesos en el mismo lugar? ¿quién está en reposo respecto del objeto?</li>
+  <li>Sumar velocidades como Galileo y obtener resultados mayores que $c$.</li>
+  <li>Calcular la energía cinética con $\tfrac12mv^2$ a velocidades relativistas, o usar $p=mv$.</li>
+  <li>Confundir energía total $E$ con energía cinética $K$.</li>
+  <li>Decir que la contracción “es una ilusión”: es lo que efectivamente se mide en ese sistema.</li>
+</ul>
+</section>
+
+<section id="multimedia">
+<h2>Videos</h2>
+<div class="medios">
+<div class="video"><div class="marco" data-yt="fKe2bGTmnhU" role="button" tabindex="0" aria-label="Reproducir: ¿Qué es la relatividad especial?"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>¿Qué es la relatividad especial?</strong><small>Date un Voltio · Javier Santaolalla · <a href="https://www.youtube.com/watch?v=fKe2bGTmnhU" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="lT4OLf4yyuU" role="button" tabindex="0" aria-label="Reproducir: Hoy sí que vas a entender la relatividad especial"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>Hoy sí que vas a entender la relatividad especial</strong><small>Javier Santaolalla · <a href="https://www.youtube.com/watch?v=lT4OLf4yyuU" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="z0WCyKmVrRg" role="button" tabindex="0" aria-label="Reproducir: E no es igual a mc²: la relación energía-masa"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>E no es igual a mc²: la relación energía-masa</strong><small>Javier Santaolalla · <a href="https://www.youtube.com/watch?v=z0WCyKmVrRg" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="HVbWtwQLHKk" role="button" tabindex="0" aria-label="Reproducir: Teoría de la relatividad especial"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>Teoría de la relatividad especial</strong><small>CuriosaMente · <a href="https://www.youtube.com/watch?v=HVbWtwQLHKk" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+</div>
+</section>
+
+<div class="paginacion"><a href="/teoria-0-ondas.html"><span>← Anterior</span>Eje 0 · Ondas</a><a class="sig" href="/teoria-2-fotones-atomo.html"><span>Siguiente →</span>Eje 2 · Propiedades corpusculares</a></div>
+</div></div>
+
+</main>
+<footer>
+  <div class="franja"></div>
+  <div class="fila">
+    <div><strong>Física IV · ISPS N.º 6005</strong><br>Instituto Superior del Profesorado de Salta N.º 6005 · Av. Entre Ríos 1851, Salta.<br>Material de estudio elaborado por el Lic. Guillermo Aráoz para el cursado y la preparación del examen final.</div>
+    <div><strong>Contacto</strong><br><a href="mailto:guille.araoz.espoz@gmail.com">guille.araoz.espoz@gmail.com</a><br>Consultas: en clase, por Classroom o a coordinar por mail.</div>
+    <div><strong>Base teórica</strong><br>Giancoli, <em>Física para ciencias e ingeniería</em>, con complementos de Eisberg y apuntes de la cátedra.</div>
+  </div>
+</footer>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/auto-render.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
+<script defer src="/assets/js/laboratorios.js"></script>
+
+</body>
+</html>

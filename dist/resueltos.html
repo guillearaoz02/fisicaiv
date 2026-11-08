@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejercicios resueltos · Física IV · ISPS 6005</title>
+<meta name="description" content="Ejercicios resueltos paso a paso de Física IV: ondas, relatividad, fotones, Bohr, De Broglie, incertidumbre, caja rígida, efecto túnel, átomos y física nuclear.">
+<meta name="author" content="Lic. Guillermo Aráoz">
+<meta property="og:title" content="Ejercicios resueltos · Física IV · ISPS 6005">
+<meta property="og:description" content="Ejercicios resueltos paso a paso de Física IV: ondas, relatividad, fotones, Bohr, De Broglie, incertidumbre, caja rígida, efecto túnel, átomos y física nuclear.">
+<meta name="theme-color" content="#b3121f">
+<link rel="icon" href="/assets/img/logo-isps6005.png">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="fila">
+    <a class="escudo" href="/" aria-label="Inicio"><img src="/assets/img/logo-isps6005.png" alt="Escudo del Instituto Superior del Profesorado de Salta N.º 6005"></a>
+    <a class="marca" href="/"><strong>Física IV</strong><span>Profesorado de Educación Secundaria en Física · ISPS N.º 6005 · Docente: Lic. Guillermo Aráoz</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="principal" id="menu" aria-label="Secciones">
+  <ul><li><a href="/">Inicio</a></li><li><a href="/reglamento.html">Reglamento</a></li><li><a href="/programa.html">Programa</a></li><li><a href="/teoria.html">Teoría</a></li><li><a href="/ejercitacion.html">Ejercitación</a></li><li><a href="/resueltos.html" class="activo" aria-current="page">Ejercicios resueltos</a></li><li><a href="/final.html">Preparar el final</a></li><li><a href="/comentarios.html">Banco de comentarios</a></li></ul>
+</nav>
+<main id="contenido">
+<p class="migas"><a href="/">Inicio</a> › Ejercicios resueltos</p>
+<h1>Ejercicios resueltos</h1>
+<p class="bajada">Problemas tipo examen, resueltos con el esquema que se pide en los parciales y en el final: <strong>planteo físico → desarrollo → resultado con unidades → interpretación</strong>. Intentá cada uno antes de abrir la resolución.</p>
+
+<div class="aviso neutro"><strong>Estrategia general</strong>1) Leé y anotá datos con unidades. 2) Identificá el fenómeno y el modelo (¿relativista? ¿fotón o partícula con masa? ¿cuál es el tiempo propio?). 3) Escribí la fórmula general antes de reemplazar. 4) En física moderna conviene trabajar en eV y nm: $hc=1240$ eV·nm, $\hbar c=197$ eV·nm, $m_ec^2=0{,}511$ MeV. 5) Preguntate si el resultado es razonable.</div>
+
+<h2 id="r0">Eje 0 · Ondas</h2>
+<h3>R0.1 · Armónicos de una cuerda</h3>
+<p>Una cuerda de guitarra de 1,20 m y 6,0 g está fija en ambos extremos con una tensión de 150 N. Calculá la frecuencia fundamental, la del tercer armónico y la longitud de onda de este.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso"><strong>Planteo.</strong> Cuerda fija–fija: nodos en los extremos, $\lambda_n=2L/n$, $f_n=nv/2L$. La rapidez depende del medio: $v=\sqrt{T/\mu}$.</div>
+<div class="paso"><strong>Densidad lineal.</strong> $\mu=m/L=0{,}0060\ \text{kg}/1{,}20\ \text{m}=5{,}0\times10^{-3}$ kg/m.</div>
+<div class="paso"><strong>Rapidez.</strong> $v=\sqrt{150/5{,}0\times10^{-3}}=173$ m/s.</div>
+<div class="paso"><strong>Frecuencias.</strong> $f_1=\dfrac{v}{2L}=\dfrac{173}{2{,}40}=72{,}2$ Hz; $f_3=3f_1=217$ Hz; $\lambda_3=2L/3=0{,}80$ m.</div>
+<div class="resultado">$f_1\approx72$ Hz · $f_3\approx217$ Hz · $\lambda_3=0{,}80$ m</div>
+<p><strong>Interpretación:</strong> la cuerda vibra en tres “husos”, con dos nodos interiores en $L/3$ y $2L/3$. El sonido en el aire tiene la misma frecuencia pero otra longitud de onda, porque cambia la rapidez.</p>
+</div></details>
+
+<h3>R0.2 · Leer una función de onda</h3>
+<p>Para $y(x,t)=0{,}020\operatorname{sen}(4\pi x-200\pi t)$ (SI), encontrá $A$, $\lambda$, $f$, $T$, $v$, el sentido de propagación y la rapidez máxima de un punto de la cuerda.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">Comparando con $y=A\operatorname{sen}(kx-\omega t)$: $A=0{,}020$ m, $k=4\pi$ rad/m, $\omega=200\pi$ rad/s.</div>
+<div class="paso">$\lambda=2\pi/k=0{,}50$ m; $f=\omega/2\pi=100$ Hz; $T=1/f=0{,}010$ s; $v=\omega/k=50$ m/s.</div>
+<div class="paso">Los signos de $kx$ y $\omega t$ son opuestos → viaja hacia $+x$.</div>
+<div class="paso">Rapidez transversal máxima: $v_{y,\max}=A\omega=0{,}020\cdot200\pi\approx12{,}6$ m/s.</div>
+<div class="resultado">$v=50$ m/s hacia $+x$, pero cada punto llega a moverse a 12,6 m/s: son velocidades distintas.</div>
+</div></details>
+
+<h2 id="r1">Eje 1 · Relatividad especial</h2>
+<h3>R1.1 · Los muones llegan al suelo</h3>
+<p>Un muón tiene una vida media propia de 2,2 μs y se crea a gran altura moviéndose a 0,995c. a) ¿Cuánto vive según un observador en la Tierra? b) ¿Qué distancia recorre en promedio? c) ¿Qué distancia se predeciría sin relatividad?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso"><strong>¿Cuál es el tiempo propio?</strong> El del muón: nacimiento y decaimiento ocurren en el mismo lugar <em>para él</em>. $\Delta t_0=2{,}2$ μs.</div>
+<div class="paso">$\gamma=1/\sqrt{1-0{,}995^2}=10{,}0$ → $\Delta t=\gamma\Delta t_0=22$ μs.</div>
+<div class="paso">Distancia: $d=v\Delta t=0{,}995\cdot3{,}00\times10^8\cdot22\times10^{-6}\approx6{,}6$ km.</div>
+<div class="paso">Sin relatividad: $d=v\Delta t_0\approx660$ m.</div>
+<div class="resultado">a) 22 μs · b) ≈ 6,6 km · c) ≈ 660 m</div>
+<p><strong>Interpretación:</strong> se detectan muchos más muones a nivel del mar de los que permite la física clásica. Desde el sistema del muón, la explicación es la contracción: la atmósfera mide 10 veces menos.</p>
+</div></details>
+
+<h3>R1.2 · Un electrón de 1 MeV</h3>
+<p>Un electrón tiene una energía cinética de 1,00 MeV. Calculá $\gamma$, su rapidez y su cantidad de movimiento (en MeV/c).</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso"><strong>Planteo.</strong> $K$ es comparable con $m_ec^2=0{,}511$ MeV: hay que usar relatividad.</div>
+<div class="paso">$K=(\gamma-1)mc^2\Rightarrow\gamma=1+\dfrac{1{,}00}{0{,}511}=2{,}96$.</div>
+<div class="paso">$v=c\sqrt{1-1/\gamma^2}=0{,}941c$.</div>
+<div class="paso">$E=K+mc^2=1{,}511$ MeV; $pc=\sqrt{E^2-(mc^2)^2}=\sqrt{1{,}511^2-0{,}511^2}=1{,}42$ MeV → $p=1{,}42$ MeV/c.</div>
+<div class="resultado">$\gamma\approx2{,}96$ · $v\approx0{,}94c$ · $p\approx1{,}42$ MeV/c</div>
+<p><strong>Control:</strong> con la fórmula clásica, $v=\sqrt{2K/m}$ daría casi $2c$: absurdo.</p>
+</div></details>
+
+<h3>R1.3 · Suma de velocidades</h3>
+<p>Una nave se aleja de la Tierra a 0,80c y lanza hacia adelante una sonda a 0,60c respecto de la nave. ¿Con qué velocidad se mueve la sonda respecto de la Tierra?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$u=\dfrac{u'+v}{1+vu'/c^2}=\dfrac{0{,}60c+0{,}80c}{1+0{,}48}=0{,}946c$.</div>
+<div class="resultado">$u\approx0{,}95c$ (Galileo daría 1,40c, imposible)</div>
+</div></details>
+
+<h2 id="r2">Eje 2 · Propiedades corpusculares de las ondas</h2>
+<h3>R2.1 · Efecto fotoeléctrico en sodio</h3>
+<p>Luz de 400 nm incide sobre sodio ($\phi=2{,}28$ eV). Calculá la energía de los fotones, la energía cinética máxima de los electrones, el potencial de frenado y la longitud de onda umbral.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$E_\gamma=hc/\lambda=1240\ \text{eV·nm}/400\ \text{nm}=3{,}10$ eV. Como $E_\gamma&gt;\phi$, hay emisión.</div>
+<div class="paso">$K_{\max}=E_\gamma-\phi=3{,}10-2{,}28=0{,}82$ eV → $V_0=K_{\max}/e=0{,}82$ V.</div>
+<div class="paso">$\lambda_0=hc/\phi=1240/2{,}28=544$ nm (verde).</div>
+<div class="resultado">$K_{\max}=0{,}82$ eV · $V_0=0{,}82$ V · $\lambda_0\approx544$ nm</div>
+<p><strong>Interpretación:</strong> con luz roja (más de 544 nm) no habría emisión, aunque fuera muy intensa.</p>
+</div></details>
+
+<h3>R2.2 · Compton a 90°</h3>
+<p>Rayos X de 70,0 pm se dispersan en grafito y se detectan a 90°. Calculá la longitud de onda dispersada y la energía cinética del electrón de retroceso.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$\Delta\lambda=\dfrac{h}{m_ec}(1-\cos90°)=2{,}43$ pm → $\lambda'=72{,}4$ pm.</div>
+<div class="paso">Por conservación de la energía: $K_e=\dfrac{hc}{\lambda}-\dfrac{hc}{\lambda'}=1240\ \text{eV·nm}\left(\dfrac{1}{0{,}0700}-\dfrac{1}{0{,}0724}\right)\text{nm}^{-1}\approx593$ eV.</div>
+<div class="resultado">$\lambda'\approx72{,}4$ pm · $K_e\approx0{,}59$ keV</div>
+</div></details>
+
+<h3>R2.3 · La línea roja del hidrógeno</h3>
+<p>Un electrón del hidrógeno pasa de $n=3$ a $n=2$. Calculá la energía y la longitud de onda del fotón e identificá la serie.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$E_3=-13{,}6/9=-1{,}51$ eV; $E_2=-13{,}6/4=-3{,}40$ eV.</div>
+<div class="paso">$E_\gamma=E_3-E_2=1{,}89$ eV → $\lambda=1240/1{,}89=656$ nm.</div>
+<div class="resultado">Emisión de 1,89 eV · 656 nm (rojo) · Serie de Balmer (línea H$\alpha$)</div>
+</div></details>
+
+<h2 id="r3">Eje 3 · Propiedades ondulatorias de las partículas</h2>
+<h3>R3.1 · De Broglie: electrón y pelota</h3>
+<p>Calculá la longitud de onda de De Broglie de a) un electrón acelerado desde el reposo por 100 V, b) una pelota de 150 g a 40 m/s.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">a) $K=100$ eV ≪ 0,511 MeV → no relativista. $pc=\sqrt{2mc^2K}=\sqrt{2\cdot0{,}511\times10^6\cdot100}$ eV $=1{,}01\times10^4$ eV. $\lambda=hc/pc=1240/1{,}01\times10^4\approx0{,}123$ nm.</div>
+<div class="paso">b) $\lambda=h/mv=6{,}63\times10^{-34}/(0{,}150\cdot40)\approx1{,}1\times10^{-34}$ m.</div>
+<div class="resultado">Electrón: 0,12 nm (como la separación atómica: difracta en cristales) · Pelota: $10^{-34}$ m (inobservable)</div>
+</div></details>
+
+<h3>R3.2 · Un electrón encerrado en un átomo</h3>
+<p>Un electrón está confinado en una región de 0,10 nm. Estimá la incertidumbre mínima en su cantidad de movimiento y en su rapidez, y la energía cinética asociada.</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$\Delta p\gtrsim\hbar/\Delta x=1{,}055\times10^{-34}/1{,}0\times10^{-10}=1{,}1\times10^{-24}$ kg·m/s.</div>
+<div class="paso">$\Delta v=\Delta p/m=1{,}1\times10^{-24}/9{,}11\times10^{-31}\approx1{,}2\times10^6$ m/s.</div>
+<div class="paso">Si $p\sim\Delta p$: $K\sim\dfrac{(\Delta p)^2}{2m}\approx6\times10^{-19}$ J $\approx3{,}8$ eV.</div>
+<div class="resultado">$K\sim$ algunos eV: el orden de las energías atómicas. Confinar al electrón “le da” energía cinética.</div>
+</div></details>
+
+<h2 id="r4">Eje 4 · Mecánica cuántica</h2>
+<h3>R4.1 · Electrón en una caja de 1 nm</h3>
+<p>Un electrón está en una caja rígida de 1,0 nm. a) Calculá las tres primeras energías. b) ¿Qué fotón emite al pasar de $n=2$ a $n=1$? c) En el estado fundamental, ¿cuál es la probabilidad de encontrarlo en el tercio central?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">a) $E_1=\dfrac{(hc)^2}{8mc^2L^2}=\dfrac{(1240)^2}{8\cdot0{,}511\times10^6\cdot(1{,}0)^2}=0{,}376$ eV; $E_2=4E_1=1{,}50$ eV; $E_3=9E_1=3{,}38$ eV.</div>
+<div class="paso">b) $E_\gamma=E_2-E_1=1{,}13$ eV → $\lambda=1240/1{,}13\approx1100$ nm (infrarrojo).</div>
+<div class="paso">c) $P=\displaystyle\int_{L/3}^{2L/3}\frac2L\operatorname{sen}^2\frac{\pi x}{L}\,dx=\frac13+\frac{1}{2\pi}\left[\operatorname{sen}\frac{2\pi}{3}-\operatorname{sen}\frac{4\pi}{3}\right]=\frac13+\frac{\sqrt3}{2\pi}\approx0{,}61$.</div>
+<div class="resultado">$E_n=0{,}376\,n^2$ eV · fotón de ≈ 1100 nm · $P\approx61$ % (clásicamente sería 33 %)</div>
+</div></details>
+
+<h3>R4.2 · Efecto túnel</h3>
+<p>Un electrón de 4,0 eV incide sobre una barrera de 6,0 eV de altura y 0,50 nm de ancho. Estimá la probabilidad de transmisión. ¿Y si fuera un protón?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$U_0-E=2{,}0$ eV. $G=\dfrac{\sqrt{2mc^2(U_0-E)}}{\hbar c}=\dfrac{\sqrt{2\cdot0{,}511\times10^6\cdot2{,}0}}{197}\ \text{nm}^{-1}=7{,}25$ nm⁻¹.</div>
+<div class="paso">$2GL=2\cdot7{,}25\cdot0{,}50=7{,}25$ → $T\approx e^{-7{,}25}\approx7\times10^{-4}$.</div>
+<div class="paso">Protón: $G$ se multiplica por $\sqrt{1836}\approx43$ → $2GL\approx310$ → $T\approx e^{-310}$, prácticamente cero.</div>
+<div class="resultado">Electrón: $T\approx7\times10^{-4}$ (unos 7 de cada 10 000) · Protón: despreciable</div>
+</div></details>
+
+<h2 id="r5">Eje 5 · Estructura atómica</h2>
+<h3>R5.1 · El estado 3d del hidrógeno</h3>
+<p>Para un electrón del hidrógeno en el estado 3d, determiná $n$, $l$, la energía, $L$, los valores de $m_l$, $L_{z,\max}$ y el número de estados del subnivel. ¿A qué estado puede bajar emitiendo un fotón y con qué longitud de onda?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">“3d”: $n=3$, $l=2$. $E_3=-13{,}6/9=-1{,}51$ eV.</div>
+<div class="paso">$L=\sqrt{l(l+1)}\hbar=\sqrt6\,\hbar=2{,}58\times10^{-34}$ J·s; $m_l=-2,-1,0,1,2$; $L_{z,\max}=2\hbar=2{,}11\times10^{-34}$ J·s.</div>
+<div class="paso">Estados del subnivel: $2(2l+1)=10$.</div>
+<div class="paso">Regla $\Delta l=\pm1$: puede ir a $l=1$ con $n&lt;3$ → solo 2p. $E_\gamma=13{,}6(1/4-1/9)=1{,}89$ eV → 656 nm.</div>
+<div class="resultado">3d → 2p, fotón de 656 nm (H$\alpha$). No puede ir directo a 1s ni a 2s.</div>
+</div></details>
+
+<h3>R5.2 · Configuración y rayos X del cobre</h3>
+<p>a) Escribí la configuración electrónica del hierro ($Z=26$). b) Estimá la longitud de onda K$\alpha$ del cobre ($Z=29$) con la ley de Moseley. c) Si se aumenta el voltaje del tubo, ¿cambia esa línea?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">a) Fe: $1s^2\,2s^2\,2p^6\,3s^2\,3p^6\,4s^2\,3d^6$ (el 4s se llena antes que el 3d).</div>
+<div class="paso">b) $\dfrac1\lambda=R(Z-1)^2\left(1-\dfrac14\right)=1{,}097\times10^7\cdot28^2\cdot0{,}75=6{,}45\times10^9$ m⁻¹ → $\lambda\approx0{,}155$ nm.</div>
+<div class="paso">c) No: K$\alpha$ depende de $Z$. El voltaje solo cambia el corte del continuo $\lambda_0=1240/V$ nm (siempre que alcance para arrancar electrones K).</div>
+<div class="resultado">K$\alpha$(Cu) ≈ 0,155 nm (valor medido: 0,154 nm)</div>
+</div></details>
+
+<h3>R5.3 · Efecto Zeeman</h3>
+<p>Un átomo en un estado con $l=1$ se coloca en un campo de 2,0 T. ¿En cuántos niveles se separa y cuál es la separación entre niveles vecinos (efecto Zeeman normal)?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">$m_l=-1,0,+1$ → 3 niveles. $\Delta E=\mu_BB=9{,}27\times10^{-24}\cdot2{,}0=1{,}85\times10^{-23}$ J $\approx1{,}2\times10^{-4}$ eV.</div>
+<div class="resultado">3 niveles separados $1{,}2\times10^{-4}$ eV: muy pequeño frente a los eV de las transiciones, pero medible con espectroscopía.</div>
+</div></details>
+
+<h2 id="r6">Eje 6 · Física nuclear</h2>
+<h3>R6.1 · Energía de enlace del helio-4</h3>
+<p>Calculá la energía de enlace total y por nucleón del $^4$He ($m=4{,}002603$ u).</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">Masa de los componentes (masas atómicas): $2\cdot1{,}007825+2\cdot1{,}008665=4{,}032980$ u.</div>
+<div class="paso">Defecto de masa: $\Delta m=4{,}032980-4{,}002603=0{,}030377$ u.</div>
+<div class="paso">$E_B=0{,}030377\cdot931{,}5=28{,}3$ MeV → $E_B/A=7{,}07$ MeV/nucleón.</div>
+<div class="resultado">$E_B\approx28{,}3$ MeV · 7,07 MeV por nucleón (núcleo muy ligado: por eso la alfa se emite “entera”)</div>
+</div></details>
+
+<h3>R6.2 · Decaimiento y datación</h3>
+<p>a) ¿Qué fracción de una muestra de $^{131}$I ($T_{1/2}=8{,}02$ d) queda a los 30 días? b) Un hueso tiene una actividad de $^{14}$C por gramo igual al 25 % de la de un ser vivo. ¿Qué antigüedad tiene?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">a) $N/N_0=e^{-\lambda t}=2^{-t/T_{1/2}}=2^{-30/8{,}02}\approx0{,}075$.</div>
+<div class="paso">b) 25 % = 1/4 = $(1/2)^2$ → pasaron dos períodos: $t=2\cdot5730=11\,460$ años.</div>
+<div class="resultado">a) ≈ 7,5 % · b) ≈ 11 500 años</div>
+</div></details>
+
+<h3>R6.3 · Fusión D–T y fisión del uranio</h3>
+<p>a) Calculá la energía liberada en $^2\text{H}+{}^3\text{H}\to{}^4\text{He}+n$. b) Si cada fisión del $^{235}$U libera 200 MeV, ¿cuánta energía da 1,0 kg?</p>
+<details class="solucion"><summary>Ver resolución</summary><div class="cuerpo">
+<div class="paso">a) $Q=(2{,}014102+3{,}016049-4{,}002603-1{,}008665)\cdot931{,}5=0{,}018883\cdot931{,}5\approx17{,}6$ MeV.</div>
+<div class="paso">b) Núcleos en 1 kg: $N=\dfrac{1000}{235}\cdot6{,}02\times10^{23}=2{,}56\times10^{24}$. Energía: $2{,}56\times10^{24}\cdot200\ \text{MeV}\cdot1{,}60\times10^{-13}\ \text{J/MeV}\approx8{,}2\times10^{13}$ J.</div>
+<div class="resultado">a) 17,6 MeV (3,5 MeV por nucleón: más que la fisión, 0,85 MeV/nucleón) · b) ≈ $8\times10^{13}$ J, lo mismo que quemar unas 2700 toneladas de carbón</div>
+</div></details>
+
+</main>
+<footer>
+  <div class="franja"></div>
+  <div class="fila">
+    <div><strong>Física IV · ISPS N.º 6005</strong><br>Instituto Superior del Profesorado de Salta N.º 6005 · Av. Entre Ríos 1851, Salta.<br>Material de estudio elaborado por el Lic. Guillermo Aráoz para el cursado y la preparación del examen final.</div>
+    <div><strong>Contacto</strong><br><a href="mailto:guille.araoz.espoz@gmail.com">guille.araoz.espoz@gmail.com</a><br>Consultas: en clase, por Classroom o a coordinar por mail.</div>
+    <div><strong>Base teórica</strong><br>Giancoli, <em>Física para ciencias e ingeniería</em>, con complementos de Eisberg y apuntes de la cátedra.</div>
+  </div>
+</footer>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/auto-render.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
+
+</body>
+</html>

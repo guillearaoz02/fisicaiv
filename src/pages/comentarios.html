@@ -1,0 +1,100 @@
+<!--meta titulo="Banco de comentarios" activo="comentarios" muro="1" descripcion="Muro de dudas y comentarios del curso de Física IV y banco de devoluciones del docente sobre errores frecuentes."-->
+<p class="migas"><a href="/">Inicio</a> › Banco de comentarios</p>
+<h1>Banco de comentarios</h1>
+<p class="bajada">Dos espacios en uno: el <strong>muro del curso</strong>, donde cualquiera puede dejar dudas, comentarios o recursos (se publican al instante y el docente responde ahí mismo), y el <strong>banco de devoluciones</strong>, con las observaciones que más se repiten al corregir.</p>
+
+<div class="rejilla dos">
+  <a class="tarjeta" href="#muro"><span class="etiqueta">Participá</span><h3>Muro de dudas y comentarios</h3><p>Preguntá lo que no entendiste, compartí un video o una forma distinta de resolver un problema.</p></a>
+  <a class="tarjeta" href="#devoluciones"><span class="etiqueta">Aprendé de los errores</span><h3>Banco de devoluciones del docente</h3><p>Los comentarios que más se escriben en los márgenes de los parciales, con ejemplos de cómo mejorar.</p></a>
+</div>
+
+<section id="muro">
+<h2>Muro de dudas y comentarios</h2>
+<div class="aviso neutro"><strong>Antes de publicar</strong>Tu mensaje aparece de inmediato para todo el curso. Escribí con respeto y sobre temas de la materia; no compartas datos personales. Para escribir fórmulas podés usar notación tipo LaTeX entre signos $, por ejemplo <code>$E=hf$</code>.</div>
+
+<form id="muro-form" class="muro-form" autocomplete="on">
+  <label>Tu nombre<input name="nombre" required maxlength="60" placeholder="Nombre y apellido"></label>
+  <label>Tema
+    <select name="eje">
+      <option value="general">General</option>
+      <option value="0">Eje 0 · Ondas</option>
+      <option value="1">Eje 1 · Relatividad</option>
+      <option value="2">Eje 2 · Fotones y Bohr</option>
+      <option value="3">Eje 3 · Ondas de materia</option>
+      <option value="4">Eje 4 · Mecánica cuántica</option>
+      <option value="5">Eje 5 · Átomos</option>
+      <option value="6">Eje 6 · Nuclear</option>
+      <option value="final">Examen final</option>
+    </select>
+  </label>
+  <label>Tipo de mensaje
+    <select name="tipo"><option value="duda">Duda</option><option value="comentario">Comentario</option><option value="aporte">Aporte / recurso</option></select>
+  </label>
+  <label class="oculto" aria-hidden="true">No completar<input name="sitio" tabindex="-1" autocomplete="off"></label>
+  <label class="ancho">Mensaje<textarea name="texto" required maxlength="2000" placeholder="Ej.: En el problema 13 del TP 3, ¿por qué se usa U₀ − E y no E?"></textarea></label>
+  <div class="ancho"><button class="btn" type="submit">Publicar</button></div>
+</form>
+
+<div class="filtros" role="group" aria-label="Filtrar mensajes">
+  <button class="chip activo" data-f="todos">Todos</button>
+  <button class="chip" data-f="sin">Dudas sin responder</button>
+  <button class="chip" data-f="general">General</button>
+  <button class="chip" data-f="0">Eje 0</button>
+  <button class="chip" data-f="1">Eje 1</button>
+  <button class="chip" data-f="2">Eje 2</button>
+  <button class="chip" data-f="3">Eje 3</button>
+  <button class="chip" data-f="4">Eje 4</button>
+  <button class="chip" data-f="5">Eje 5</button>
+  <button class="chip" data-f="6">Eje 6</button>
+  <button class="chip" data-f="final">Final</button>
+</div>
+<p id="muro-estado" class="estado" aria-live="polite"></p>
+<div id="muro-lista"></div>
+<p style="text-align:right;font-size:.85rem"><a href="#" id="muro-acceso">Acceso docente</a></p>
+
+<!-- Formulario de respaldo para Netlify Forms (no se muestra) -->
+<form name="muro-respaldo" data-netlify="true" netlify-honeypot="sitio" hidden>
+  <input name="nombre"><input name="eje"><input name="tipo"><input name="sitio"><textarea name="texto"></textarea>
+</form>
+</section>
+
+<section id="devoluciones">
+<h2>Banco de devoluciones del docente</h2>
+<p>Estas son las observaciones que más se repiten al corregir trabajos prácticos, parciales y finales. Leelas antes de entregar: casi todas se evitan con un minuto de revisión.</p>
+
+<h3>Sobre el planteo</h3>
+<details><summary>“Falta el planteo físico: ¿qué fenómeno es y qué modelo usás?”</summary><div class="cuerpo">
+<p>Un resultado sin planteo no se puede evaluar. Empezá con una frase: <em>“Es una transición en el átomo de Bohr; la energía del fotón es la diferencia de energías entre niveles”</em>. Después escribí la fórmula general y recién ahí reemplazá.</p></div></details>
+<details><summary>“¿Cuál es el tiempo propio (o la longitud propia)?”</summary><div class="cuerpo">
+<p>En relatividad, el error más frecuente es aplicar $\gamma$ al revés. Antes de calcular, escribí quién mide $\Delta t_0$ (el observador que ve los dos sucesos en el mismo lugar) o $L_0$ (el que está en reposo respecto del objeto). Si tu resultado da un tiempo propio mayor que el medido por otro observador, algo está invertido.</p></div></details>
+<details><summary>“Esta fórmula es para fotones, no para electrones.”</summary><div class="cuerpo">
+<p>$E=hc/\lambda$ y $E=pc$ valen para partículas sin masa. Para un electrón: $\lambda=h/p$ con $p=\sqrt{2mK}$ (no relativista) o $pc=\sqrt{K^2+2Kmc^2}$ (relativista).</p></div></details>
+<details><summary>“Revisá la regla de selección.”</summary><div class="cuerpo">
+<p>En el átomo, las transiciones con emisión de un fotón cumplen $\Delta l=\pm1$. Antes de calcular una longitud de onda, verificá que el estado final tenga $l$ una unidad mayor o menor, y que $l&lt;n$.</p></div></details>
+
+<h3>Sobre las cuentas y las unidades</h3>
+<details><summary>“Unidades: mezclaste eV y J.”</summary><div class="cuerpo">
+<p>Elegí un sistema y mantenelo. En física atómica, lo más cómodo es eV y nm: $hc=1240$ eV·nm, $\hbar c=197$ eV·nm, $m_ec^2=0{,}511\times10^6$ eV. Si necesitás joules: 1 eV = $1{,}60\times10^{-19}$ J.</p></div></details>
+<details><summary>“Densidad lineal: pasá los gramos a kilogramos y dividí por la longitud.”</summary><div class="cuerpo">
+<p>$\mu=m/L$ en kg/m. Usar la masa total en $v=\sqrt{T/\mu}$ da resultados absurdos.</p></div></details>
+<details><summary>“El resultado no tiene unidades / tiene demasiadas cifras.”</summary><div class="cuerpo">
+<p>Todo resultado lleva unidades. Y si los datos tienen dos o tres cifras significativas, el resultado también: “$\lambda=656{,}385882$ nm” no es más preciso, es menos cuidadoso.</p></div></details>
+<details><summary>“$\lambda$ en s⁻¹: la constante de decaimiento debe ir en las mismas unidades que el tiempo.”</summary><div class="cuerpo">
+<p>Para obtener la actividad en Bq, $\lambda$ tiene que estar en s⁻¹. Si $T_{1/2}$ está en años, convertilo ($1$ año $\approx3{,}156\times10^7$ s).</p></div></details>
+
+<h3>Sobre la interpretación</h3>
+<details><summary>“¿Es razonable el resultado? Comentalo.”</summary><div class="cuerpo">
+<p>Una velocidad mayor que $c$, una probabilidad mayor que 1 o una energía de ionización negativa indican un error. Cerrá cada problema con una frase: <em>“La línea cae en el visible (rojo): es la H$\alpha$ de Balmer”</em>.</p></div></details>
+<details><summary>“Indicá la región del espectro.”</summary><div class="cuerpo">
+<p>Referencia rápida: rayos X ≲ 10 nm; ultravioleta 10–380 nm; visible 380–750 nm (violeta → rojo); infrarrojo > 750 nm.</p></div></details>
+<details><summary>“$|\psi|^2$ no es la probabilidad: es una densidad de probabilidad.”</summary><div class="cuerpo">
+<p>La probabilidad es $|\psi|^2dx$ (o la integral en un intervalo). Un nodo de $\psi$ significa probabilidad nula de encontrar la partícula <em>en ese punto</em>, no que “no pueda pasar por ahí”.</p></div></details>
+
+<h3>Sobre las respuestas teóricas</h3>
+<details><summary>“Respuesta incompleta: enunciá, explicá y ejemplificá.”</summary><div class="cuerpo">
+<p>Una buena respuesta teórica tiene tres partes: el enunciado preciso (con la ecuación si existe), la explicación de qué significa y un ejemplo o una consecuencia experimental. Ejemplo para el fotoeléctrico: ecuación de Einstein + por qué contradice a la teoría ondulatoria + frecuencia umbral medida.</p></div></details>
+<details><summary>“Cuidado con el lenguaje: ‘el electrón gira en su órbita’.”</summary><div class="cuerpo">
+<p>En el modelo cuántico no hay órbitas: hay estados con una distribución de probabilidad. Reservá “órbita” para cuando hables explícitamente del modelo de Bohr.</p></div></details>
+<details><summary>“El principio de incertidumbre no es un error de medición.”</summary><div class="cuerpo">
+<p>Es una propiedad de la naturaleza ondulatoria de la materia: una onda localizada necesita muchas longitudes de onda, es decir, muchos valores de $p$. Ningún instrumento, por perfecto que sea, puede evitarlo.</p></div></details>
+</section>

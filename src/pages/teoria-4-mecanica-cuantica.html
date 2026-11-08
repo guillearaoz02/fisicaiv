@@ -1,0 +1,164 @@
+<!--meta titulo="Eje 4 · Mecánica cuántica" activo="teoria" labs="1" descripcion="Ecuación de Schrödinger, partícula en una caja rígida, normalización, pozo finito, barreras y efecto túnel, oscilador armónico cuántico y problemas tridimensionales."-->
+<p class="migas"><a href="/">Inicio</a> › <a href="/teoria.html">Teoría</a> › Eje 4</p>
+<h1>Eje 4 · Mecánica cuántica</h1>
+<div class="lectura"><span>Leer: Giancoli, cap. 38 (Mecánica cuántica), desde la partícula libre hasta el efecto túnel</span><span>Complemento: Eisberg, oscilador armónico cuántico y caja tridimensional</span></div>
+
+<div class="con-indice">
+<aside class="indice"><strong>En este eje</strong>
+<a href="#condiciones">1. Funciones aceptables</a><a href="#libre">2. Partícula libre</a><a href="#caja">3. Caja rígida</a><a href="#probabilidad">4. Probabilidad</a><a href="#pozo">5. Pozo finito</a><a href="#tunel">6. Efecto túnel</a><a href="#oscilador">7. Oscilador armónico</a><a href="#tres-d">8. Problemas en 3D</a><a href="#lab-caja">Laboratorios</a><a href="#formulas">Fórmulas</a><a href="#errores">Errores típicos</a><a href="#multimedia">Simulaciones y videos</a>
+</aside>
+<div class="contenido">
+
+<p>Resolver un problema de mecánica cuántica significa: dado el potencial $U(x)$, encontrar las funciones $\psi(x)$ y las energías $E$ que satisfacen la ecuación de Schrödinger</p>
+$$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+U(x)\,\psi=E\,\psi$$
+<p>con condiciones que garanticen sentido físico.</p>
+
+<section id="condiciones">
+<h2>1. Condiciones de una función de onda físicamente aceptable</h2>
+<ol>
+  <li>$\psi$ debe ser <strong>continua</strong> (y finita) en todo punto.</li>
+  <li>$d\psi/dx$ debe ser continua donde el potencial $U$ es finito.</li>
+  <li>$\psi$ debe ser <strong>normalizable</strong>: $\psi\to0$ cuando $x\to\pm\infty$ y $\int|\psi|^2dx=1$.</li>
+</ol>
+<p class="idea">Estas condiciones son las que “eligen” las energías permitidas: igual que en la cuerda fija, solo algunas ondas cumplen las condiciones de borde.</p>
+</section>
+
+<section id="libre">
+<h2>2. Partícula libre</h2>
+<p>Con $U=0$: $\psi=A\operatorname{sen}kx+B\cos kx$, con $k=\sqrt{2mE}/\hbar$. Cualquier energía $E\geq0$ está permitida (no hay cuantización porque no hay confinamiento). Una onda plana tiene $p$ exacto pero posición totalmente indeterminada; una partícula localizada es un paquete de ondas.</p>
+</section>
+
+<section id="caja">
+<h2>3. Partícula en una caja rígida (pozo infinito)</h2>
+<p>La partícula se mueve libremente entre $x=0$ y $x=L$, pero las paredes son infinitamente altas: $U=0$ adentro, $U=\infty$ afuera. Fuera de la caja, $\psi=0$; por continuidad, $\psi(0)=\psi(L)=0$.</p>
+<div class="paso"><strong>Paso 1.</strong> Adentro, $\psi=A\operatorname{sen}kx+B\cos kx$. Como $\psi(0)=0$, $B=0$.</div>
+<div class="paso"><strong>Paso 2.</strong> Como $\psi(L)=0$, $\operatorname{sen}kL=0\Rightarrow kL=n\pi$, $n=1,2,3,\dots$ ($n=0$ daría $\psi\equiv0$: no hay partícula). Equivale a $L=n\lambda/2$: <strong>solo caben números enteros de medias longitudes de onda</strong>, como en la cuerda fija.</div>
+<div class="paso"><strong>Paso 3.</strong> Con $E=\hbar^2k^2/2m$ y normalizando:</div>
+$$\psi_n(x)=\sqrt{\frac{2}{L}}\operatorname{sen}\frac{n\pi x}{L},\qquad E_n=n^2\frac{h^2}{8mL^2}=n^2E_1,\qquad E_1=\frac{(hc)^2}{8mc^2L^2}$$
+<ul>
+  <li><strong>La energía está cuantizada</strong> y los niveles se separan cada vez más ($E_n\propto n^2$).</li>
+  <li><strong>La energía mínima no es cero</strong> (energía de punto cero). Si fuera cero, $p=0$ exactamente ($\Delta p=0$), mientras que $\Delta x\leq L$ es finito: violaría el principio de incertidumbre.</li>
+  <li>Cuanto más chica la caja o más liviana la partícula, más separados los niveles. Para un electrón en $L=1$ nm, $E_1\approx0{,}38$ eV; para una pelota en una caja de 1 m, los niveles están tan juntos que parecen continuos (correspondencia con lo clásico).</li>
+  <li>$\psi_n$ tiene $n-1$ <strong>nodos</strong> internos: más energía, más nodos.</li>
+  <li>Al pasar de $n_i$ a $n_f$, la partícula emite un fotón de energía $E_{n_i}-E_{n_f}$.</li>
+</ul>
+</section>
+
+<section id="probabilidad">
+<h2>4. Probabilidad y normalización</h2>
+<p>La probabilidad de encontrar la partícula entre $x_1$ y $x_2$ es</p>
+$$P=\int_{x_1}^{x_2}|\psi_n|^2\,dx$$
+<ul>
+  <li>Para $n=1$ es más probable encontrarla en el centro; clásicamente, la probabilidad sería uniforme. Ejemplo: en el tercio central, $P\approx0{,}61$ (y no 1/3).</li>
+  <li>Para $n=2$ hay un nodo en el centro: la probabilidad de encontrarla <strong>exactamente</strong> en $x=L/2$ es cero. Eso no significa que “no pueda pasar” por ahí: la partícula no tiene trayectoria; $|\psi|^2$ describe dónde aparece si se la mide.</li>
+  <li>Para $n$ grande, el promedio de $|\psi|^2$ tiende a ser uniforme: se recupera el resultado clásico.</li>
+</ul>
+</section>
+
+<section id="pozo">
+<h2>5. Pozo de potencial finito</h2>
+<p>Si las paredes tienen altura finita $U_0$, para $E&lt;U_0$ la función de onda <strong>no se anula en las paredes</strong>: penetra en la región prohibida clásicamente decayendo en forma exponencial, $\psi\propto e^{-Gx}$, con</p>
+$$G=\frac{\sqrt{2m(U_0-E)}}{\hbar}$$
+<p>Consecuencias: como la onda “se extiende” un poco más, las longitudes de onda son algo mayores y <strong>las energías algo menores</strong> que en la caja rígida del mismo ancho; además hay un <strong>número finito</strong> de estados ligados. Para $E&gt;U_0$, la partícula no está ligada y cualquier energía es posible.</p>
+</section>
+
+<section id="tunel">
+<h2>6. Barreras de potencial y efecto túnel</h2>
+<p>Una partícula de energía $E$ incide sobre una barrera de altura $U_0>E$ y ancho $L$. Clásicamente rebota siempre. Cuánticamente, $\psi$ decae dentro de la barrera pero, si la barrera es delgada, llega con amplitud no nula al otro lado: la partícula tiene una probabilidad de atravesarla. Para barreras “opacas” ($GL\gg1$), el <strong>coeficiente de transmisión</strong> es aproximadamente</p>
+$$T\approx e^{-2GL},\qquad G=\frac{\sqrt{2m(U_0-E)}}{\hbar}=\frac{\sqrt{2mc^2(U_0-E)}}{\hbar c},\qquad \hbar c=197\ \text{eV·nm}$$
+<ul>
+  <li>$T$ depende <strong>exponencialmente</strong> del ancho: si $L$ se duplica, $T$ pasa a ser aproximadamente $T^2$.</li>
+  <li>Depende de la masa: un protón atraviesa mucho menos que un electrón en las mismas condiciones.</li>
+  <li><strong>Aplicaciones:</strong> microscopio de efecto túnel (STM), que “ve” átomos individuales midiendo una corriente túnel muy sensible a la distancia; diodo túnel; memorias flash; <strong>decaimiento alfa</strong> (la partícula alfa escapa del núcleo atravesando la barrera de Coulomb); fusión en las estrellas.</li>
+</ul>
+</section>
+
+<section id="oscilador">
+<h2>7. El oscilador armónico cuántico <small>(complemento de Eisberg)</small></h2>
+<p>Con $U=\tfrac12m\omega^2x^2$ (resorte, vibración de una molécula diatómica), la ecuación de Schrödinger da energías <strong>igualmente espaciadas</strong>:</p>
+$$E_n=\left(n+\tfrac12\right)\hbar\omega=\left(n+\tfrac12\right)hf,\qquad n=0,1,2,\dots$$
+<ul>
+  <li>La separación entre niveles es $hf$: es exactamente el cuanto de Planck para los osciladores del cuerpo negro (eje 2).</li>
+  <li>La energía mínima $\tfrac12\hbar\omega$ (punto cero) no es nula, de nuevo por incertidumbre.</li>
+  <li>El estado fundamental es una gaussiana $\psi_0\propto e^{-m\omega x^2/2\hbar}$; los demás tienen $n$ nodos. Como en el pozo finito, $\psi$ penetra más allá de los puntos de retorno clásicos.</li>
+  <li>Transiciones permitidas: $\Delta n=\pm1$, fotones de energía $hf$ (espectros vibracionales en el infrarrojo).</li>
+</ul>
+</section>
+
+<section id="tres-d">
+<h2>8. Problemas tridimensionales</h2>
+<p>En 3D la ecuación incluye las tres derivadas segundas. Para una partícula en una <strong>caja cúbica</strong> de lado $L$, la solución es el producto de tres soluciones 1D:</p>
+$$\psi=\left(\tfrac{2}{L}\right)^{3/2}\operatorname{sen}\frac{n_x\pi x}{L}\operatorname{sen}\frac{n_y\pi y}{L}\operatorname{sen}\frac{n_z\pi z}{L},\qquad E=\frac{h^2}{8mL^2}\left(n_x^2+n_y^2+n_z^2\right)$$
+<ul>
+  <li>Aparecen <strong>tres números cuánticos</strong>, uno por dimensión.</li>
+  <li><strong>Degeneración:</strong> distintos estados pueden tener la misma energía. Por ejemplo, $(2,1,1)$, $(1,2,1)$ y $(1,1,2)$ tienen $E=6E_1$. La degeneración se debe a la simetría del cubo.</li>
+  <li>El mismo método (separación de variables) es el que se usa para el átomo de hidrógeno en coordenadas esféricas (eje 5).</li>
+</ul>
+</section>
+
+<section id="lab-caja">
+<h2>Laboratorio: partícula en una caja rígida</h2>
+<div class="lab" id="lab-caja">
+  <h3>Funciones de onda y energías</h3>
+  <div class="controles">
+    <label><span>Estado n = <b class="n-val"></b></span><input type="range" name="n" min="1" max="8" value="1"></label>
+    <label>Ancho L (nm)<input type="number" name="L" value="1.0" min="0.00001" step="0.1"></label>
+    <label>Partícula<select name="part"><option value="e">Electrón</option><option value="p">Protón</option></select></label>
+  </div>
+  <canvas style="height:260px"></canvas>
+  <div class="salida"></div>
+  <p class="estado">Probá L = 0,50 nm y n = 3: ¿en qué región del espectro cae el fotón de la transición 3 → 1? Después cambiá a protón y mirá cuánto bajan las energías.</p>
+</div>
+</section>
+
+<section id="lab-tunel">
+<h2>Laboratorio: efecto túnel</h2>
+<div class="lab" id="lab-tunel">
+  <h3>Coeficiente de transmisión T ≈ e<sup>−2GL</sup></h3>
+  <div class="controles">
+    <label>Energía E (eV)<input type="number" name="E" value="4" step="0.1" min="0"></label>
+    <label>Altura U₀ (eV)<input type="number" name="U" value="6" step="0.1" min="0"></label>
+    <label>Ancho L (nm)<input type="number" name="L" value="0.5" step="0.05" min="0.01"></label>
+    <label>Partícula<select name="part"><option value="e">Electrón</option><option value="p">Protón</option></select></label>
+  </div>
+  <canvas style="height:200px"></canvas>
+  <div class="salida"></div>
+</div>
+</section>
+
+<section id="formulas">
+<h2>Fórmulas clave</h2>
+<div class="formulas">
+<div class="formula">$\psi_n=\sqrt{2/L}\,\operatorname{sen}(n\pi x/L)\qquad E_n=n^2h^2/(8mL^2)\qquad \lambda_n=2L/n$</div>
+<div class="formula">$P=\int_{x_1}^{x_2}|\psi|^2dx\qquad \int|\psi|^2dx=1$</div>
+<div class="formula">$T\approx e^{-2GL}\qquad G=\sqrt{2m(U_0-E)}/\hbar\qquad \hbar c=197\ \text{eV·nm}$</div>
+<div class="formula">$E_n=(n+\tfrac12)\hbar\omega\qquad E=\dfrac{h^2}{8mL^2}(n_x^2+n_y^2+n_z^2)$</div>
+</div>
+</section>
+
+<section id="errores">
+<h2>Errores típicos</h2>
+<ul>
+  <li>Empezar la caja en $n=0$: el estado fundamental es $n=1$ (en el oscilador, en cambio, sí existe $n=0$).</li>
+  <li>Calcular $E_n$ con $L$ en nm y $h$ en J·s sin convertir. Usá $E_1=(hc)^2/(8mc^2L^2)$ con $hc=1240$ eV·nm y $m_ec^2=0{,}511\times10^6$ eV.</li>
+  <li>En el túnel, usar $E$ en lugar de $U_0-E$, o el ancho en metros con $\hbar c$ en eV·nm.</li>
+  <li>Interpretar el nodo de $\psi_2$ como “la partícula no puede cruzar el centro”.</li>
+  <li>Olvidar que en el pozo finito $\psi$ no se anula en las paredes.</li>
+</ul>
+</section>
+
+<section id="multimedia">
+<h2>Simulaciones y videos</h2>
+<div class="medios">
+<x-sim slug="bound-states" t="Estados ligados cuánticos">Pozo cuadrado, pozo infinito, oscilador armónico y más: niveles de energía, $\psi$ y $|\psi|^2$.</x-sim>
+<x-sim slug="quantum-tunneling" t="Efecto túnel y paquetes de ondas">Mandá ondas planas o paquetes contra una barrera y medí la transmisión al cambiar ancho y altura.</x-sim>
+<x-ext href="https://www.falstad.com/qm1d/" t="Estados cuánticos en 1D" c="Falstad">Simulador muy completo: superposición de estados en pozos, oscilador y barreras, con evolución temporal.</x-ext>
+</div>
+<div class="medios">
+<x-video id="wvG0fwyFeb8" t="¿Es posible atravesar una pared? El efecto túnel" c="Date un Voltio · Javier Santaolalla"></x-video>
+<x-video id="fdp-a1SpXlo" t="Superposición cuántica" c="Javier Santaolalla · I LOL Ciencia"></x-video>
+</div>
+</section>
+
+<div class="paginacion"><a href="/teoria-3-ondas-materia.html"><span>← Anterior</span>Eje 3 · Ondas de materia</a><a class="sig" href="/teoria-5-estructura-atomica.html"><span>Siguiente →</span>Eje 5 · Estructura atómica</a></div>
+</div></div>

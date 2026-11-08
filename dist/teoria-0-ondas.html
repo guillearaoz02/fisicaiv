@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eje 0 · Ondas · Física IV · ISPS 6005</title>
+<meta name="description" content="Resumen de ondas mecánicas: ecuación de onda, ondas armónicas, energía, superposición y ondas estacionarias.">
+<meta name="author" content="Lic. Guillermo Aráoz">
+<meta property="og:title" content="Eje 0 · Ondas · Física IV · ISPS 6005">
+<meta property="og:description" content="Resumen de ondas mecánicas: ecuación de onda, ondas armónicas, energía, superposición y ondas estacionarias.">
+<meta name="theme-color" content="#b3121f">
+<link rel="icon" href="/assets/img/logo-isps6005.png">
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="fila">
+    <a class="escudo" href="/" aria-label="Inicio"><img src="/assets/img/logo-isps6005.png" alt="Escudo del Instituto Superior del Profesorado de Salta N.º 6005"></a>
+    <a class="marca" href="/"><strong>Física IV</strong><span>Profesorado de Educación Secundaria en Física · ISPS N.º 6005 · Docente: Lic. Guillermo Aráoz</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="principal" id="menu" aria-label="Secciones">
+  <ul><li><a href="/">Inicio</a></li><li><a href="/reglamento.html">Reglamento</a></li><li><a href="/programa.html">Programa</a></li><li><a href="/teoria.html" class="activo" aria-current="page">Teoría</a></li><li><a href="/ejercitacion.html">Ejercitación</a></li><li><a href="/resueltos.html">Ejercicios resueltos</a></li><li><a href="/final.html">Preparar el final</a></li><li><a href="/comentarios.html">Banco de comentarios</a></li></ul>
+</nav>
+<main id="contenido">
+<p class="migas"><a href="/">Inicio</a> › <a href="/teoria.html">Teoría</a> › Eje 0</p>
+<h1>Eje 0 · Ondas</h1>
+<div class="lectura"><span>Leer: Giancoli, vol. 1, cap. 15 (Movimiento ondulatorio) y cap. 16 (Sonido)</span><span>Complemento: apunte de la cátedra (esta página)</span></div>
+
+<div class="con-indice">
+<aside class="indice"><strong>En este eje</strong>
+<a href="#que-es">1. ¿Qué es una onda?</a><a href="#ecuacion">2. La ecuación de onda</a><a href="#armonicas">3. Ondas armónicas</a><a href="#energia">4. Energía e intensidad</a><a href="#superposicion">5. Superposición</a><a href="#estacionarias">6. Ondas estacionarias</a><a href="#tubos">7. Tubos sonoros</a><a href="#puente">8. Puente a la cuántica</a><a href="#lab">Laboratorio</a><a href="#formulas">Fórmulas</a><a href="#errores">Errores típicos</a><a href="#multimedia">Simulaciones y videos</a>
+</aside>
+<div class="contenido">
+
+<section id="que-es">
+<h2>1. ¿Qué es una onda?</h2>
+<p class="idea">Una onda es una perturbación que se propaga. Lo que viaja es la perturbación (y con ella la energía), no la materia del medio.</p>
+<p>Cuando tirás una piedra a un estanque, cada porción de agua sube y baja alrededor de su posición de equilibrio, pero lo que avanza en círculos es la deformación. En este eje trabajamos con <strong>ondas mecánicas</strong>, que necesitan un medio material (no se propagan en el vacío). Las ondas electromagnéticas, en cambio, sí viajan en el vacío: las retomamos en los ejes 1 y 2.</p>
+<ul>
+  <li><strong>Transversales:</strong> la perturbación es perpendicular a la dirección de propagación (cuerda sacudida de costado, superficie del agua).</li>
+  <li><strong>Longitudinales:</strong> la perturbación es paralela a la propagación (un resorte comprimido en un extremo, el sonido en el aire).</li>
+  <li>Un <strong>pulso</strong> es una perturbación aislada; un <strong>tren de ondas</strong> se genera perturbando el medio periódicamente. La frecuencia de la onda la impone la fuente, no el medio.</li>
+</ul>
+</section>
+
+<section id="ecuacion">
+<h2>2. La ecuación de onda</h2>
+<p>Tomemos un trocito de cuerda de largo $dx$ y masa $dm = \mu\,dx$ ($\mu$: densidad lineal de masa), tensado con una tensión $T$. Suponemos desplazamientos transversales pequeños (ángulos chicos) y despreciamos la gravedad. Las tensiones en los dos extremos del trocito tienen casi la misma componente horizontal (que se cancela), pero distinta componente vertical porque la cuerda está curvada. Aplicando la segunda ley de Newton en la dirección $y$ y usando $\operatorname{sen}\theta \approx \tan\theta = \partial y/\partial x$:</p>
+$$T\,\frac{\partial^2 y}{\partial x^2}\,dx = \mu\,dx\,\frac{\partial^2 y}{\partial t^2}\qquad\Longrightarrow\qquad \frac{\partial^2 y}{\partial x^2}=\frac{1}{v^2}\,\frac{\partial^2 y}{\partial t^2},\qquad v=\sqrt{\frac{T}{\mu}}$$
+<p>El cociente $T/\mu$ tiene unidades de velocidad al cuadrado: es la <strong>rapidez de propagación</strong>, que depende solo de las propiedades del medio (cuán tensa y cuán pesada es la cuerda). Usamos derivadas parciales porque $y$ depende de dos variables, $x$ y $t$.</p>
+<p>Cualquier función de la forma $y = f(x - vt)$ (perfil que viaja hacia $+x$) o $y = f(x+vt)$ (hacia $-x$), o una combinación lineal de ambas, es solución.</p>
+<p><strong>Ondas longitudinales en una barra.</strong> Con un razonamiento análogo, usando la relación entre esfuerzo y deformación (módulo de Young $Y$), se obtiene la misma ecuación para el desplazamiento longitudinal $u(x,t)$, con $v=\sqrt{Y/\rho}$. Para el sonido en un fluido, $v=\sqrt{B/\rho}$ ($B$: módulo volumétrico).</p>
+<p><strong>En dos y tres dimensiones</strong> la ecuación toma la forma $v^2\nabla^2\psi = \partial^2\psi/\partial t^2$. Los <strong>frentes de onda</strong> unen puntos con el mismo estado de perturbación: circunferencias en la superficie de un estanque, esferas alrededor de una fuente puntual de sonido.</p>
+</section>
+
+<section id="armonicas">
+<h2>3. Ondas armónicas</h2>
+<p>Son las que se describen con senos o cosenos. Importan porque, por el teorema de Fourier, cualquier forma de onda se puede construir como suma de ondas armónicas.</p>
+$$y(x,t)=A\,\operatorname{sen}(kx-\omega t+\varphi)$$
+<div class="tabla"><table>
+<thead><tr><th>Magnitud</th><th>Símbolo y relación</th><th>Significado</th></tr></thead>
+<tbody>
+<tr><td>Amplitud</td><td>$A$</td><td>Máximo apartamiento de un punto del medio respecto del equilibrio.</td></tr>
+<tr><td>Número de onda</td><td>$k = 2\pi/\lambda$</td><td>Radianes de fase por metro.</td></tr>
+<tr><td>Frecuencia angular</td><td>$\omega = 2\pi f = 2\pi/T$</td><td>Radianes de fase por segundo.</td></tr>
+<tr><td>Rapidez de propagación</td><td>$v = \lambda f = \omega/k$</td><td>Lo que avanza el perfil por segundo.</td></tr>
+<tr><td>Sentido</td><td>$kx-\omega t$: hacia $+x$; $kx+\omega t$: hacia $-x$</td><td>Mismo signo entre $kx$ y $\omega t$ → viaja hacia $-x$.</td></tr>
+</tbody></table></div>
+<p><strong>Dos lecturas de la misma función.</strong></p>
+<ul>
+  <li>Con <strong>$t$ fijo</strong>, $y(x)$ es una “foto” de la cuerda: ahí se mide la <strong>longitud de onda</strong> $\lambda$.</li>
+  <li>Con <strong>$x$ fijo</strong>, $y(t)$ es la “historia” de un punto, que oscila con MAS: ahí se mide el <strong>período</strong> $T$.</li>
+</ul>
+<p>Atención: la velocidad con que se mueve un punto de la cuerda, $v_y = \partial y/\partial t = -A\omega\cos(kx-\omega t)$, <strong>no</strong> es la velocidad de propagación. Su máximo es $A\omega$ y la aceleración máxima es $A\omega^2$.</p>
+</section>
+
+<section id="energia">
+<h2>4. Energía, potencia e intensidad</h2>
+<p>Cada trocito de cuerda tiene energía cinética y potencial elástica. Promediando en el tiempo, ambas son iguales, y la potencia media que transporta una onda armónica en una cuerda es:</p>
+$$\bar P = \tfrac12\,\mu\,\omega^2 A^2\, v$$
+<p>Depende del <strong>cuadrado</strong> de la amplitud y del cuadrado de la frecuencia. En una dimensión y sin pérdidas, la potencia que pasa por cualquier punto es la misma. En dos o tres dimensiones la energía se reparte sobre frentes cada vez más grandes, por lo que conviene definir la <strong>intensidad</strong> (potencia por unidad de área):</p>
+$$I = \frac{P}{\text{Área}},\qquad \text{fuente puntual: } I=\frac{P}{4\pi r^2}\;\;(I\propto 1/r^2)$$
+<p>Para el sonido, la sensación de volumen no es proporcional a $I$ sino, aproximadamente, a su logaritmo. Por eso se usa el <strong>nivel de intensidad</strong> en decibeles:</p>
+$$\beta = 10\log\frac{I}{I_0}\ \text{dB},\qquad I_0 = 10^{-12}\ \text{W/m}^2$$
+<p>El umbral de audición corresponde a 0 dB y el umbral de dolor ($\approx 1$ W/m²) a 120 dB.</p>
+</section>
+
+<section id="superposicion">
+<h2>5. Superposición e interferencia</h2>
+<p class="idea">Cuando dos ondas coinciden en un punto, los desplazamientos se suman algebraicamente. Después, cada onda sigue su camino como si nada hubiera pasado.</p>
+<ul>
+  <li>Dos ondas iguales <strong>en fase</strong> (diferencia de fase $0, 2\pi, \dots$): interferencia <strong>constructiva</strong>, amplitud $2A$.</li>
+  <li>Dos ondas iguales con diferencia de fase $\pi$: interferencia <strong>destructiva</strong>, se anulan.</li>
+  <li>Ondas de distinta frecuencia: se obtienen ondas complejas; se trabaja igual (se escribe cada onda y se suman).</li>
+</ul>
+<p><strong>Pulsaciones (batimiento).</strong> Si se superponen dos ondas de frecuencias muy parecidas $f_1$ y $f_2$, en un punto fijo se obtiene una oscilación de frecuencia promedio $(f_1+f_2)/2$ cuya amplitud sube y baja lentamente. Se perciben</p>
+$$f_{\text{pulsaciones}} = |f_1 - f_2|$$
+<p>pulsos de intensidad por segundo. Así se afinan instrumentos: se ajusta hasta que las pulsaciones desaparecen.</p>
+</section>
+
+<section id="estacionarias">
+<h2>6. Ondas estacionarias</h2>
+<p>Se forman al superponer dos ondas idénticas que viajan en sentidos opuestos (por ejemplo, una onda y su reflexión en el extremo fijo de una cuerda):</p>
+$$y_1 + y_2 = A\operatorname{sen}(kx-\omega t)+A\operatorname{sen}(kx+\omega t) = \underbrace{2A\operatorname{sen}(kx)}_{\text{amplitud según }x}\cos(\omega t)$$
+<p>La posición y el tiempo quedaron <strong>separados</strong>: cada punto oscila con una amplitud que depende solo de dónde está. La onda “no viaja”.</p>
+<ul>
+  <li><strong>Nodos</strong> (amplitud cero): $\operatorname{sen}kx=0 \Rightarrow x = n\,\lambda/2$.</li>
+  <li><strong>Vientres o antinodos</strong> (amplitud máxima $2A$): $x = (2n+1)\,\lambda/4$.</li>
+  <li>La distancia entre dos nodos consecutivos es $\lambda/2$; entre un nodo y el vientre siguiente, $\lambda/4$.</li>
+</ul>
+<h3>Cuerda fija en ambos extremos</h3>
+<p>Los extremos están quietos, así que deben ser nodos. Solo “caben” números enteros de medias longitudes de onda:</p>
+$$L = n\frac{\lambda_n}{2}\quad\Rightarrow\quad \lambda_n=\frac{2L}{n},\qquad f_n = n\,\frac{v}{2L}=n f_1,\qquad n=1,2,3,\dots$$
+<p>El modo $n=1$ es el <strong>fundamental</strong> o primer armónico; los demás son múltiplos enteros. Una cuerda fija en un extremo y libre en el otro (atada a un hilo liviano) tiene nodo en un extremo y vientre en el otro, como el tubo cerrado.</p>
+</section>
+
+<section id="tubos">
+<h2>7. Ondas longitudinales estacionarias en tubos</h2>
+<p>En un tubo de aire representamos el <strong>desplazamiento longitudinal</strong> $u$ de las partículas de aire en el eje vertical (aunque el movimiento real es a lo largo del tubo). En un extremo <strong>abierto</strong> el aire se mueve libremente: hay un <strong>vientre</strong> de desplazamiento. En un extremo <strong>cerrado</strong> el aire no puede moverse: hay un <strong>nodo</strong>. La onda de presión está desfasada en $\pi/2$ respecto de la de desplazamiento: donde hay nodo de desplazamiento hay vientre de presión.</p>
+<div class="tabla"><table>
+<thead><tr><th>Sistema</th><th>Condición</th><th>$\lambda_n$</th><th>$f_n$</th><th>Armónicos presentes</th></tr></thead>
+<tbody>
+<tr><td>Cuerda fija–fija</td><td>nodo–nodo</td><td>$2L/n$</td><td>$n\,v/2L$</td><td>todos</td></tr>
+<tr><td>Tubo abierto–abierto</td><td>vientre–vientre</td><td>$2L/n$</td><td>$n\,v/2L$</td><td>todos</td></tr>
+<tr><td>Tubo abierto–cerrado</td><td>nodo–vientre</td><td>$4L/(2n-1)$</td><td>$(2n-1)\,v/4L$</td><td>solo impares</td></tr>
+</tbody></table></div>
+<p>En el tubo cerrado, el “primer sobretono” es el <strong>tercer</strong> armónico ($3f_1$): los pares no existen.</p>
+</section>
+
+<section id="puente">
+<h2>8. Puente hacia la física cuántica</h2>
+<p class="idea">Las condiciones de borde eligen qué ondas pueden existir. Esa misma idea explica por qué la energía de un electrón ligado está cuantizada.</p>
+<ul>
+  <li>La cuerda fija solo admite $\lambda_n = 2L/n$. Un electrón en una “caja rígida” solo admite esas mismas longitudes de onda de De Broglie y, por lo tanto, energías $E_n\propto n^2$ (eje 4).</li>
+  <li>En un anillo, la onda debe repetirse después de una vuelta: así aparecen las órbitas de Bohr reinterpretadas por De Broglie ($2\pi r = n\lambda$) y el número cuántico $m_l$ (eje 5).</li>
+  <li>La superposición de ondas de distintas frecuencias da <strong>paquetes de ondas</strong>, la base del principio de incertidumbre (eje 3).</li>
+</ul>
+</section>
+
+<section id="lab">
+<h2>Laboratorio: ondas estacionarias</h2>
+<div class="lab" id="lab-estacionarias">
+  <h3>Armónicos en cuerdas y tubos</h3>
+  <div class="controles">
+    <label>Sistema<select name="tipo"><option value="cuerda">Cuerda fija en ambos extremos</option><option value="abierto">Tubo abierto en ambos extremos</option><option value="cerrado">Tubo cerrado en un extremo</option></select></label>
+    <label><span>Modo <b class="n-val">1</b></span><input type="range" name="n" min="1" max="6" value="1"></label>
+    <label>Longitud L (m)<input type="number" name="L" value="1.2" min="0.1" step="0.1"></label>
+    <label>Rapidez v (m/s)<input type="number" name="v" value="173" min="1" step="1"></label>
+  </div>
+  <canvas style="height:220px"></canvas>
+  <div class="salida"></div>
+  <p class="estado">Probá: con la cuerda, pasá de n = 1 a n = 3 y contá nodos. Con el tubo cerrado, mirá que la frecuencia salta de $f_1$ a $3f_1$.</p>
+</div>
+</section>
+
+<section id="formulas">
+<h2>Fórmulas clave</h2>
+<div class="formulas">
+<div class="formula">$v=\sqrt{T/\mu}\qquad \mu = m/L\qquad v=\lambda f=\omega/k\qquad k=2\pi/\lambda\qquad \omega=2\pi f=2\pi/T$</div>
+<div class="formula">$y=A\operatorname{sen}(kx\mp\omega t)\qquad v_{y,\max}=A\omega\qquad a_{y,\max}=A\omega^2$</div>
+<div class="formula">$\bar P=\tfrac12\mu\omega^2A^2v\qquad I=P/(4\pi r^2)\qquad \beta=10\log(I/I_0)$</div>
+<div class="formula">$y=2A\operatorname{sen}kx\cos\omega t\qquad f_n=n\,v/2L\ \text{(fija–fija, abierto–abierto)}\qquad f_n=(2n-1)\,v/4L\ \text{(cerrado)}$</div>
+</div>
+</section>
+
+<section id="errores">
+<h2>Errores típicos</h2>
+<ul>
+  <li>Usar la masa total en lugar de la densidad lineal $\mu=m/L$ (y olvidarse de pasar gramos a kilogramos).</li>
+  <li>Confundir la velocidad de propagación $v$ con la velocidad transversal de un punto de la cuerda.</li>
+  <li>Leer mal el sentido de propagación: $\operatorname{sen}(kx+\omega t)$ viaja hacia $-x$.</li>
+  <li>En tubos cerrados, “inventar” armónicos pares.</li>
+  <li>Creer que la frecuencia cambia al pasar de un medio a otro: cambia $v$ y cambia $\lambda$; $f$ la fija la fuente.</li>
+</ul>
+</section>
+
+<section id="multimedia">
+<h2>Simulaciones y videos</h2>
+<div class="medios">
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Onda en una cuerda</strong><p>Cambiá tensión, amortiguamiento y extremo (fijo, libre, sin fin). Con extremo fijo y oscilador, buscá los armónicos.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Introducción a las ondas</strong><p>Agua, sonido y luz: frecuencia, amplitud y la diferencia entre las vistas “foto” y “gráfica”.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/waves-intro/latest/waves-intro_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/waves-intro/latest/waves-intro_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Interferencia de ondas</strong><p>Dos fuentes y doble rendija: zonas de interferencia constructiva y destructiva.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+<div class="sim"><span class="etiqueta">Simulación PhET</span><strong style="display:block">Fourier: hacer ondas</strong><p>Sumá armónicos para armar cualquier forma de onda y anticipá los paquetes de ondas del eje 3.</p><div class="ventana"><button class="btn" data-sim-src="https://phet.colorado.edu/sims/html/fourier-making-waves/latest/fourier-making-waves_all.html?locale=es">Cargar aquí</button></div><div class="acciones"><a class="btn claro" href="https://phet.colorado.edu/sims/html/fourier-making-waves/latest/fourier-making-waves_all.html?locale=es" target="_blank" rel="noopener">Pantalla completa</a></div></div>
+</div>
+<div class="medios">
+<div class="video"><div class="marco" data-yt="8RhXaAunKdo" role="button" tabindex="0" aria-label="Reproducir: Ondas estacionarias en cuerdas: modo fundamental y armónicos"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>Ondas estacionarias en cuerdas: modo fundamental y armónicos</strong><small>Video de clase · <a href="https://www.youtube.com/watch?v=8RhXaAunKdo" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+<div class="video"><div class="marco" data-yt="lVnh1kEb7hI" role="button" tabindex="0" aria-label="Reproducir: Ondas estacionarias: de los armónicos en cuerdas a los orbitales atómicos"><button class="play" aria-hidden="true" tabindex="-1"></button></div><div class="texto"><strong>Ondas estacionarias: de los armónicos en cuerdas a los orbitales atómicos</strong><small>Video de divulgación · <a href="https://www.youtube.com/watch?v=lVnh1kEb7hI" target="_blank" rel="noopener">ver en YouTube</a></small></div></div>
+</div>
+</section>
+
+<div class="paginacion"><a href="/teoria.html"><span>← Volver</span>Índice de teoría</a><a class="sig" href="/teoria-1-relatividad.html"><span>Siguiente →</span>Eje 1 · Relatividad especial</a></div>
+</div></div>
+
+</main>
+<footer>
+  <div class="franja"></div>
+  <div class="fila">
+    <div><strong>Física IV · ISPS N.º 6005</strong><br>Instituto Superior del Profesorado de Salta N.º 6005 · Av. Entre Ríos 1851, Salta.<br>Material de estudio elaborado por el Lic. Guillermo Aráoz para el cursado y la preparación del examen final.</div>
+    <div><strong>Contacto</strong><br><a href="mailto:guille.araoz.espoz@gmail.com">guille.araoz.espoz@gmail.com</a><br>Consultas: en clase, por Classroom o a coordinar por mail.</div>
+    <div><strong>Base teórica</strong><br>Giancoli, <em>Física para ciencias e ingeniería</em>, con complementos de Eisberg y apuntes de la cátedra.</div>
+  </div>
+</footer>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/auto-render.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
+<script defer src="/assets/js/laboratorios.js"></script>
+
+</body>
+</html>
